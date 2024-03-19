@@ -1,0 +1,2565 @@
+* {
+    padding: 0;
+    margin: 0 auto;
+}
+
+@font-face {
+    font-family: "Futura_Book-Normal";
+    src: url("../fonts/Futura_book.ttf");
+}
+
+@font-face {
+    font-family: "Futura PT";
+    src: url("../fonts/futura-pt-demi.ttf");
+}
+
+@font-face {
+    font-family: "Montserrat";
+    font-style: italic;
+    src: url("../fonts/Montserrat-Italic.ttf");
+}
+
+.container {
+    max-width: 1170px;
+    padding-right: 30px;
+    padding-left: 30px;
+    box-sizing: border-box;
+}
+
+.title {
+    font-size: 38px;
+    font-family: "Futura PT", sans-serif;
+    color: rgb(255, 255, 255);
+    line-height: 1.2;
+}
+
+.title-animation {
+    opacity: 0;
+    transform: translateY(100%);
+}
+
+.title-animation.element-show {
+    opacity: 1;
+    transition: all 1s;
+    transform: translateY(0%);
+}
+
+.title-second {
+    font-size: 40px;
+    font-family: "Futura PT", sans-serif;
+    color: rgb(19, 19, 19);
+    line-height: 1;
+}
+
+.subtitle {
+    font-size: 40px;
+    font-family: "Futura PT", sans-serif;
+    color: rgb(68, 145, 255);
+    line-height: 1;
+}
+
+.button {
+    border: 0;
+    background-image: -moz-linear-gradient(-90deg, rgb(149, 216, 247) 0%, rgb(68, 145, 255) 100%);
+    background-image: -webkit-linear-gradient(-90deg, rgb(149, 216, 247) 0%, rgb(68, 145, 255) 100%);
+    background-image: -ms-linear-gradient(-90deg, rgb(149, 216, 247) 0%, rgb(68, 145, 255) 100%);
+    box-shadow: 0 2px 0 0 rgba(45, 135, 255, 0.75),
+    inset 2px 3px 5px 0 rgba(190, 228, 252, 0.004);
+    font-size: 23px;
+    font-family: "Futura PT", sans-serif;
+    color: rgb(255, 255, 255);
+    line-height: 1.2;
+    cursor: pointer;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.button:disabled {
+    color: rgb(255, 255, 255);
+    cursor: not-allowed;
+    background-image: -moz-linear-gradient(-90deg, rgb(162, 162, 162) 0%, rgb(84, 84, 84) 100%);
+    background-image: -webkit-linear-gradient(-90deg, rgb(162, 162, 162) 0%, rgb(84, 84, 84) 100%);
+    background-image: -ms-linear-gradient(-90deg, rgb(162, 162, 162) 0%, rgb(84, 84, 84) 100%);
+    box-shadow: 0 2px 0 0 rgba(84, 84, 84, 100%),
+    inset 2px 3px 5px 0 rgba(84, 84, 84, 0);
+}
+
+.flare {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 45px;
+    transform: skewX(-45deg);
+    left: -150%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.4));
+    animation: flareAnimation 4s infinite linear;
+}
+
+.error-text {
+    color: red;
+    font-size: 11px;
+    font-family: "Futura_Book-Normal", sans-serif;
+    display: none;
+}
+
+.error-text.visible {
+    display: block;
+}
+
+
+.first-screen {
+    background-blend-mode: color-dodge;
+    background: linear-gradient(45deg, #2f2e2e, #2f2e2e) center / cover, url(../images/main_bg.png) center top / cover no-repeat;
+    overflow-x: hidden;
+}
+
+.first-screen .header {
+    margin-bottom: 67px;
+}
+
+.first-screen .header .container {
+    display: flex;
+    align-items: center;
+    padding-top: 9px;
+    padding-bottom: 9px;
+}
+
+.first-screen .header .container .logo {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.first-screen .header .container .contacts {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.first-screen .header .container .contacts .working-hours,
+.first-screen .header .container .contacts .address {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.first-screen .header .container .contacts .working-hours {
+    align-items: flex-end;
+}
+
+.first-screen .header .container .contacts .address {
+    align-items: flex-start;
+}
+
+.first-screen .header .container .working-hours .working-hours-item,
+.first-screen .header .container .address .address-item {
+    margin: 0;
+    font-size: 16px;
+    font-family: "Futura_Book-Normal", sans-serif;
+    color: rgb(255, 255, 255);
+    line-height: 1.2;
+}
+
+.first-screen .header .container .manager {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.first-screen .header .container .manager .green-point {
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgb(53, 174, 16);
+    width: 6px;
+    height: 6px;
+    right: 8px;
+    bottom: 8px;
+}
+
+.first-screen .header .container .question {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.first-screen .header .container .question .question-item,
+.first-screen .header .container .question .question-item a {
+    padding: 11px 0 6px;
+    margin: 0;
+    font-size: 16px;
+    font-family: "Futura_Book-Normal", sans-serif;
+    color: rgb(255, 255, 255);
+    line-height: 1.2;
+    border-top: 2px dashed #4491ff;
+}
+
+.first-screen .header .container .question .question-item a {
+    font-family: "Futura PT", sans-serif;
+    text-decoration: none;
+}
+
+.first-screen .header .container .question .question-item.first-item {
+    border-top: 0;
+    padding: 0 0 6px;
+    box-sizing: border-box;
+}
+
+
+.first-screen .header .container .messages {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    gap: 19px;
+}
+
+.first-screen .header .container .messages .messages-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+}
+
+.first-screen .header .container .action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 172px;
+    height: 42px;
+    border-radius: 7px;
+    background: linear-gradient(90deg, #457dcd, #4491ff);
+    box-shadow: 0 9px 8px 2px rgba(2, 2, 2, 0.11);
+    box-sizing: border-box;
+    margin-right: 0;
+}
+
+.first-screen .header .container .action .button {
+    font-size: 16px;
+    background: linear-gradient(180deg, #2f2e2e, #2f2e2e), url("../images/bg5.png") center / cover no-repeat;
+    width: 170px;
+    height: 40px;
+    border: 0;
+    border-radius: 7px;
+    font-family: "Futura_Book-Normal", sans-serif;
+    color: rgb(255, 255, 255);
+    line-height: 1.2;
+    cursor: pointer;
+    background-blend-mode: exclusion;
+}
+
+.first-screen .header .container .action .button-call {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: url("../images/icons/telephone-white.png") center / auto no-repeat;
+    width: 26px;
+    height: 26px;
+}
+
+.first-screen .main-screen .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 110px;
+}
+
+.first-screen .main-screen .container .main-screen-description {
+    max-width: 786px;
+    margin: 0;
+}
+
+.first-screen .main-screen .container .main-screen-description .main-screen-door-image-mobile {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.first-screen .main-screen .container .main-screen-description .title {
+    max-width: 665px;
+    margin: 0 0 72px;
+}
+
+.first-screen .main-screen .container .main-screen-description .button {
+    width: 263px;
+    height: 66px;
+    border-radius: 10px;
+    margin-bottom: 109px;
+}
+
+.first-screen .main-screen .container .main-screen-description .flare {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 45px;
+    transform: skewX(-45deg);
+    left: -150%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.4));
+    animation: flareAnimation 2s infinite linear;
+}
+
+.first-screen .main-screen .container .main-screen-description .main-screen-advantages {
+    position: relative;
+}
+
+.first-screen .main-screen .container .main-screen-description .main-screen-advantages .main-screen-advantages-items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 51px;
+}
+
+.first-screen .main-screen .container .main-screen-description .main-screen-advantages .main-screen-advantages-left,
+.first-screen .main-screen .container .main-screen-description .main-screen-advantages .main-screen-advantages-right {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    width: 30px;
+    height: 100%;
+    z-index: 15;
+}
+
+.first-screen .main-screen .container .main-screen-description .main-screen-advantages .main-screen-advantages-left {
+    left: 10px;
+    background: url("../images/icons/arrow-left.png") center / auto no-repeat;
+}
+
+.first-screen .main-screen .container .main-screen-description .main-screen-advantages .main-screen-advantages-right {
+    right: 10px;
+    background: url("../images/icons/arrow-right.png") center / auto no-repeat;
+}
+
+.first-screen .main-screen .container .main-screen-description .main-screen-advantages .main-screen-advantages-items .main-screen-advantages-item {
+    margin: 0;
+    max-width: 223px;
+}
+
+.first-screen .main-screen .container .main-screen-description .main-screen-advantages .main-screen-advantages-items .main-screen-advantages-item .main-screen-advantages-item-image {
+    margin-bottom: 18px;
+    font-size: 50px;
+    font-family: "Futura_Book-Normal", sans-serif;
+    color: rgb(255, 255, 255);
+    line-height: 0.8;
+    font-weight: lighter;
+}
+
+.first-screen .main-screen .container .main-screen-description .main-screen-advantages .main-screen-advantages-items .main-screen-advantages-item .main-screen-advantages-item-title {
+    font-size: 20px;
+    font-family: "Futura PT", sans-serif;
+    color: rgb(255, 255, 255);
+    line-height: 1.2;
+    margin-bottom: 22px;
+}
+
+.first-screen .main-screen .container .main-screen-description .main-screen-advantages .main-screen-advantages-items .main-screen-advantages-item .main-screen-advantages-item-text {
+    font-size: 14px;
+    font-family: "Futura_Book-Normal", sans-serif;
+    color: rgb(227, 226, 226);
+    line-height: 1.2;
+    text-align: justify;
+}
+
+.first-screen .main-screen .container .main-screen-image {
+    position: relative;
+    width: 276px;
+    height: 579px;
+    margin: 0;
+}
+
+.first-screen .main-screen .container .main-screen-image img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.first-screen .main-screen .container .main-screen-image .main-screen-image-circle {
+    border-radius: 50%;
+    background-color: rgb(137, 137, 137);
+    position: absolute;
+    width: 526px;
+    height: 526px;
+    bottom: 0;
+    left: calc(-526px / 2 + 276px / 2);
+    z-index: 0;
+}
+
+.first-screen .main-screen .container .main-screen-image .door-advantage {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    z-index: 5;
+}
+
+.first-screen .main-screen .container .main-screen-image .door-advantage:hover {
+    cursor: pointer;
+}
+
+.first-screen .main-screen .container .main-screen-image .door-advantage .door-advantage-image {
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 15;
+}
+
+.first-screen .main-screen .container .main-screen-image .door-advantage .door-advantage-image img {
+    width: 15px;
+    height: 15px;
+}
+
+
+.first-screen .main-screen .container .main-screen-image .door-advantage .door-advantage-image::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    border: 1px solid rgba(255, 255, 255, 0.149);
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    animation: circle 3s linear .5s infinite;
+}
+
+.first-screen .main-screen .container .main-screen-image .door-advantage .door-advantage-image::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    border: 1px solid rgba(255, 255, 255, 0.149);
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    animation: circle 3s linear infinite;
+}
+
+
+.first-screen .main-screen .container .main-screen-image .door-advantage .door-advantage-item {
+    position: absolute;
+    font-size: 24px;
+    font-family: "Futura_Book-Normal", sans-serif;
+    color: rgb(252, 252, 252);
+    line-height: 1.2;
+    z-index: 10;
+    opacity: 0;
+}
+
+.door-action {
+    animation: attenuation 4s linear;
+}
+
+.first-screen .main-screen .container .main-screen-image .door-advantage#safety {
+    top: 41px;
+    right: 30px;
+}
+
+.first-screen .main-screen .container .main-screen-image .door-advantage#safety .door-advantage-item {
+    top: 35px;
+    right: 0;
+}
+
+.first-screen .main-screen .container .main-screen-image .door-advantage#durability {
+    top: 104px;
+    left: 8px;
+}
+
+.first-screen .main-screen .container .main-screen-image .door-advantage#durability .door-advantage-item {
+    top: 35px;
+    left: 19px;
+}
+
+.first-screen .main-screen .container .main-screen-image .door-advantage#design {
+    top: 236px;
+    left: 128px;
+}
+
+.first-screen .main-screen .container .main-screen-image .door-advantage#design .door-advantage-item {
+    top: 35px;
+    left: 19px;
+}
+
+@keyframes attenuation {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes circle {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+.second-screen {
+    position: relative;
+    width: 100%;
+    height: 528px;
+    background: linear-gradient(180deg, #2f2e2e, #2f2e2e), url("../images/bg2.png") center / cover;
+    background-blend-mode: color;
+}
+
+.second-screen .container {
+    position: relative;
+    height: 598px;
+}
+
+.second-screen .container .container-div {
+    bottom: -38px;
+    position: absolute;
+    height: 598px;
+    background-image: -moz-linear-gradient(-90deg, rgb(231, 231, 231) 0%, rgb(255, 255, 255) 100%);
+    background-image: -webkit-linear-gradient(-90deg, rgb(231, 231, 231) 0%, rgb(255, 255, 255) 100%);
+    background-image: -ms-linear-gradient(-90deg, rgb(231, 231, 231) 0%, rgb(255, 255, 255) 100%);
+    border-width: 1px;
+    border-color: rgb(137, 137, 137);
+    border-style: solid;
+    border-radius: 30px;
+    box-sizing: border-box;
+    padding: 35px;
+    display: flex;
+    align-items: flex-start;
+    z-index: 10;
+}
+
+.second-screen .container .container-div .background-image {
+    margin: 0;
+    width: 153px;
+    height: 112px;
+    position: absolute;
+    background-image: url("../images/airplane.png");
+    bottom: 25px;
+    left: calc(100% / 2 + 153px / 2);
+}
+
+.second-screen .container .container-div .photos {
+    margin: 0;
+    width: 341px;
+    height: 523px;
+}
+
+.second-screen .container .container-div .photos-pagination {
+    position: absolute;
+    bottom: 10px;
+    left: calc(341px / 2 + 10px);
+    width: 50px;
+}
+
+.second-screen .container .container-div .advantages {
+    margin: 0 0 0 71px;
+}
+
+.second-screen .container .container-div .advantages .advantages-title {
+    margin: 0 0 38px;
+    max-width: 408px;
+}
+
+.second-screen .container .container-div .advantages .advantages-block {
+    display: flex;
+    margin: 0;
+    gap: 44px;
+}
+
+.second-screen .container .container-div .advantages .advantages-block .advantages-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-bottom: 1px solid rgb(0, 0, 0);
+
+}
+
+.second-screen .container .container-div .advantages .advantages-block .advantages-items .advantage-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+    gap: 12px;
+    font-size: 20px;
+    font-family: "Futura PT", sans-serif;
+    color: rgb(19, 19, 19);
+}
+
+.second-screen .container .container-div .advantages .advantages-block .advantages-items .advantage-item:last-child {
+    margin-bottom: 57px;
+}
+
+.second-screen .container .container-div .advantages .advantages-block .advantages-items .advantage-item .checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    border-radius: 50%;
+    width: 23px;
+    height: 23px;
+    background-color: rgb(228, 228, 228);
+}
+
+.second-screen .container .container-div .advantages .advantages-block .advantages-action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 295px;
+    gap: 21px;
+}
+
+.second-screen .container .container-div .advantages .advantages-block .advantages-action img {
+    width: 295px;
+    height: 334px;
+}
+
+
+.second-screen .container .container-div .advantages .advantages-block .advantages-action .button {
+    border-radius: 9px;
+    width: 246px;
+    height: 52px;
+}
+
+
+.third-screen {
+    padding-top: 223px;
+    padding-bottom: 280px;
+    background-image: url("../images/bg3.png");
+}
+
+.third-screen .dignities {
+    margin-bottom: 120px;
+}
+
+.third-screen .dignities .container {
+    position: relative;
+}
+
+.third-screen .dignities .container .title-second {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.third-screen .dignities .container .dignities-items {
+    display: flex;
+    justify-content: space-between;
+}
+
+.third-screen .dignities .container .dignities-items .dignity-item {
+    max-width: 257px;
+}
+
+.third-screen .dignities .container .dignities-items .dignity-item .dignity-item-image {
+    margin-bottom: 30px;
+}
+
+.third-screen .dignities .container .dignities-items .dignity-item .dignity-item-title {
+    font-size: 20px;
+    font-family: "Futura PT", sans-serif;
+    color: rgb(19, 19, 19);
+    line-height: 1.2;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.third-screen .dignities .container .dignities-items .dignity-item .dignity-item-description {
+    font-size: 14px;
+    font-family: "Futura_Book-Normal", sans-serif;
+    color: rgb(48, 48, 48);
+    line-height: 1.2;
+    text-align: justify;
+}
+
+.third-screen .doors .container {
+    position: relative;
+}
+
+.third-screen .doors .container .title-second {
+    text-align: center;
+    margin-bottom: 43px;
+}
+
+
+.third-screen .doors .container .doors-container .doors-items .door-item {
+    padding: 15px;
+    box-sizing: border-box;
+    border-width: 1px;
+    border-color: rgb(214, 196, 196);
+    border-style: solid;
+    border-radius: 10px;
+    width: 550px;
+    height: 564px;
+    display: grid;
+    justify-content: space-between;
+    align-items: stretch;
+    grid-template:
+            'door-main-image door-characteristic'
+            'door-description door-action';
+}
+
+.third-screen .doors .container .doors-container .doors-items .door-item .door-main-image {
+    border-radius: 8px;
+    background-color: rgb(255, 255, 255);
+    width: 314px;
+    height: 474px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    grid-area: door-main-image;
+    position: relative;
+}
+
+.third-screen .doors .container .doors-container .doors-items .door-item .door-main-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.third-screen .doors .container .doors-container .doors-items .door-item .door-main-image .doors-number {
+    width: auto;
+    height: auto;
+    top: 15px;
+    left: 15px;
+    position: absolute;
+}
+
+.third-screen .doors .container .doors-container .doors-items .door-item .door-characteristic {
+    grid-area: door-characteristic;
+    max-width: 192px;
+    margin: 0;
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.third-screen .doors .container .doors-container .doors-items .door-item .door-characteristic .door-all-photos {
+    position: relative;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 11px;
+    background-color: rgb(255, 255, 255);
+    width: 192px;
+    height: 142px;
+}
+
+.third-screen .doors .container .doors-container .doors-items .door-item .door-characteristic .door-all-photos:hover {
+    cursor: pointer;
+}
+
+.third-screen .doors .container .doors-container .doors-items .door-item .door-characteristic .door-all-photos .door-blur {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.third-screen .doors .container .doors-container .doors-items .door-item .door-characteristic .door-all-photos .increase {
+    z-index: 1;
+    margin: auto auto 17px;
+}
+
+.third-screen .doors .container .doors-container .doors-items .door-item .door-characteristic .door-all-photos div {
+    z-index: 1;
+    font-size: 14px;
+    font-family: "Futura_Book-Normal", sans-serif;
+    color: rgb(253, 252, 252);
+    line-height: 1;
+    margin: 0 0 13px;
+}
+
+.third-screen .doors .container .doors-container .doors-items .door-item .door-characteristic .door-materials {
+    margin: 0;
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.third-screen .doors .container .doors-container .doors-items .door-item .door-characteristic .door-materials .door-material-item {
+    margin: 0;
+    gap: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.third-screen .doors .container .doors-container .doors-items .door-item .door-characteristic .door-materials .door-material-item .door-material-item-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    width: 48px;
+    height: 44px;
+}
+
+.third-screen .doors .container .doors-container .doors-items .door-item .door-characteristic .door-materials .door-material-item .door-material-item-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.third-screen .doors .container .doors-container .doors-items .door-item .door-characteristic .door-materials .door-material-item .door-material-item-text {
+    font-size: 14px;
+    font-family: "Futura_Book-Normal", sans-serif;
+    color: rgb(48, 48, 48);
+    line-height: 1;
+}
+
+.third-screen .doors .container .doors-container .doors-items .door-item .door-characteristic .door-characteristic-item {
+    margin: 0;
+}
+
+.third-screen .doors .container .doors-container .doors-items .door-item .door-characteristic .door-characteristic-item .door-characteristic-item-title {
+    font-size: 14px;
+    font-family: "Futura PT", sans-serif;
+    color: rgb(19, 19, 19);
+    line-height: 1.2;
+    margin: 0;
+}
+
+.third-screen .doors .container .doors-container .doors-items .door-item .door-characteristic .door-characteristic-item .door-characteristic-item-text {
+    font-size: 14px;
+    font-family: "Futura_Book-Normal", sans-serif;
+    color: rgb(19, 19, 19);
+    line-height: 1;
+    margin: 0;
+}
+
+.third-screen .doors .container .doors-container .doors-items .door-item .door-description {
+    grid-area: door-description;
+    display: grid;
+    grid-template:
+            'door-name door-credit'
+            'door-amount door-credit';
+    gap: 6px 15px;
+}
+
+.third-screen .doors .container .doors-container .doors-items .door-item .door-description .door-name {
+    grid-area: door-name;
+    font-size: 22px;
+    font-family: "Futura PT", sans-serif;
+    color: rgb(68, 145, 255);
+    line-height: 1;
+    margin: 0;
+    display: flex;
+    align-items: end;
+}
+
+.third-screen .doors .container .doors-container .doors-items .door-item .door-description .door-amount {
+    grid-area: door-amount;
+    font-size: 12px;
+    font-family: "Futura_Book-Normal", sans-serif;
+    color: rgb(48, 48, 48);
+    margin: 0;
+    line-height: 1;
+    text-align: right;
+}
+
+.third-screen .doors .container .doors-container .doors-items .door-item .door-description .door-credit {
+    grid-area: door-credit;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.third-screen .doors .container .doors-container .doors-items .door-item .door-description .door-credit label {
+    border-width: 1px 0 1px 1px;
+    border-color: rgb(0, 0, 0);
+    border-style: solid;
+    border-radius: 8px 0 0 8px;
+    width: 75px;
+    height: 35px;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-family: "Futura PT", sans-serif;
+    color: rgb(0, 0, 0);
+}
+
+.third-screen .doors .container .doors-container .doors-items .door-item .door-description .door-credit .credit-button {
+    border-width: 1px;
+    border-color: rgb(0, 0, 0);
+    border-style: solid;
+    border-radius: 0 8px 8px 0;
+    width: 75px;
+    height: 35px;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Futura PT", sans-serif;
+    color: rgb(0, 0, 0);
+}
+
+.third-screen .doors .container .doors-container .doors-items .door-item .door-actions {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: door-action;
+}
+
+.third-screen .doors .container .doors-container .doors-items .door-item .door-actions .button {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+    width: 173px;
+    height: 43px;
+    font-family: "Futura PT", sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+}
+
+.third-screen .doors .container .arrow-prev,
+.third-screen .doors .container .arrow-next {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 17px;
+    position: absolute;
+    z-index: 100;
+    cursor: pointer;
+    opacity: 0.3;
+}
+
+.third-screen .doors .container .arrow-prev:hover,
+.third-screen .doors .container .arrow-next:hover {
+    opacity: 1;
+}
+
+.third-screen .doors .container .arrow-prev {
+    left: -5px;
+    top: 0;
+}
+
+.third-screen .doors .container .arrow-next {
+    right: -5px;
+    top: 0;
+}
+
+.third-screen .doors .container .arrow-prev img,
+.third-screen .doors .container .arrow-next img {
+    width: 17px;
+    height: 63px;
+}
+
+.four-screen {
+    position: relative;
+    overflow-x: clip;
+    height: 0;
+}
+
+.four-screen .content-box {
+    position: relative;
+    top: -160px;
+    width: 1110px;
+    padding: 70px 96px 16px;
+    background: linear-gradient(180deg, #302e2e, #5f5e5e);
+    border-radius: 24px;
+    border: 1px solid #6f6e6e;
+    box-sizing: border-box;
+}
+
+.four-screen .content-box .catalog-image {
+    position: absolute;
+    left: 360px;
+}
+
+.four-screen .content-box .catalog-image .catalog-arrow {
+    position: relative;
+    left: 248px;
+    top: -60px;
+}
+
+.four-screen .content-box .pdf-gray {
+    position: absolute;
+    right: 65px;
+    top: 35px;
+}
+
+.four-screen .content-box .pdf {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 49px;
+    height: 56px;
+    overflow: hidden;
+    border-radius: 0 0 24px;
+    opacity: 0.3;
+}
+
+.four-screen .content-box .airplane {
+    position: absolute;
+    top: 6px;
+    right: 18px;
+    z-index: 0;
+}
+
+.four-screen .content-box .title {
+    max-width: 680px;
+    margin: 0;
+}
+
+.four-screen .content-box .four-screen-content-image {
+    margin: 16px 0 21px 17px;
+    width: 76px;
+    height: 104px;
+    position: relative;
+}
+
+.four-screen .content-box .four-screen-content-image .image {
+    position: absolute;
+    width: 76px;
+    height: 104px;
+}
+
+.four-screen .content-box .four-screen-content-image .first-image {
+    top: 0;
+    left: 0;
+    z-index: 2;
+    animation: pdfTransform 5s infinite linear;
+}
+
+@keyframes pdfTransform {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(10%, 10%);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+.four-screen .content-box .four-screen-content-image .second-image {
+    top: 9px;
+    left: 23px;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.four-screen .content-box .four-screen-action-block {
+    max-width: 258px;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.four-screen .content-box .four-screen-action-block .action-block-title {
+    font-size: 21px;
+    font-family: "Futura PT", sans-serif;
+    color: rgb(255, 255, 255);
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+
+.four-screen .content-box .four-screen-action-block .action-block-messages {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 35px;
+}
+
+.four-screen .content-box .four-screen-action-block .action-block-messages .action-block-messages-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    font-family: "Futura_Book-Normal", sans-serif;
+    color: rgb(96, 94, 94);
+}
+
+.four-screen .content-box .four-screen-action-block .action-block-messages .action-block-messages-button:hover {
+    cursor: pointer;
+}
+
+.four-screen .content-box .four-screen-action-block .action-block-messages .action-block-messages-button .button-image {
+    margin-right: 11px;
+    width: 41px;
+    height: 41px;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.four-screen .content-box .four-screen-action-block .action-block-messages .action-block-messages-button .button-image .flare {
+    display: none;
+}
+
+.four-screen .content-box .four-screen-action-block .action-block-messages .action-block-messages-button.active .button-image .flare {
+    display: block;
+}
+
+.four-screen .content-box .four-screen-action-block .action-block-messages .action-block-messages-button .button-image {
+    margin-right: 11px;
+    width: 41px;
+    height: 41px;
+}
+
+.four-screen .content-box .four-screen-action-block .action-block-messages .action-block-messages-button.telegram-button.active {
+    color: rgb(41, 169, 235);
+}
+
+.four-screen .content-box .four-screen-action-block .action-block-messages .action-block-messages-button.telegram-button .button-image {
+    background-image: url("../images/telegram_not_active.png");
+}
+
+.four-screen .content-box .four-screen-action-block .action-block-messages .action-block-messages-button.telegram-button.active .button-image {
+    background-image: url("../images/telegram.png");
+}
+
+.four-screen .content-box .four-screen-action-block .action-block-messages .action-block-messages-button.viber-button.active {
+    color: rgb(102, 92, 172);
+}
+
+.four-screen .content-box .four-screen-action-block .action-block-messages .action-block-messages-button.viber-button .button-image {
+    background-image: url("../images/viber_not_active.png");
+}
+
+.four-screen .content-box .four-screen-action-block .action-block-messages .action-block-messages-button.viber-button.active .button-image {
+    background-image: url("../images/viber.png");
+}
+
+.four-screen .content-box .four-screen-action-block .action-block-inputs {
+    width: 100%;
+    margin-bottom: 11px;
+}
+
+.four-screen .content-box .four-screen-action-block .action-block-inputs .input {
+    width: 100%;
+    padding: 18px 28px;
+    box-sizing: border-box;
+    display: none;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: transparent;
+    border: 1px solid #302e2e;
+    border-radius: 8px;
+    font-size: 20px;
+    font-family: "Futura_Book-Normal", sans-serif;
+    color: rgb(193, 192, 192);
+}
+
+.four-screen .content-box .four-screen-action-block .action-block-inputs .input.active {
+    display: flex;
+}
+
+.four-screen .content-box .four-screen-action-block .action-block-inputs .input.active.error {
+    border-color: red;
+}
+
+.four-screen .content-box .four-screen-action-block .action-block-inputs .input.telegram-input {
+    border: 1px solid #5071a2;
+}
+
+.four-screen .content-box .four-screen-action-block .action-block-inputs .input.viber-input {
+    border: 1px solid #5b567b;
+}
+
+.four-screen .content-box .four-screen-action-block .action-block-button {
+    width: 100%;
+    margin-bottom: 62px;
+}
+
+.four-screen .content-box .four-screen-action-block .action-block-button .button {
+    width: 100%;
+    border-radius: 8px;
+    padding: 18px;
+}
+
+.four-screen .content-box .personal-data {
+    display: flex;
+    align-items: center;
+}
+
+.four-screen .content-box .personal-data input {
+    margin: 0 10px 0 0;
+    cursor: pointer;
+}
+
+.four-screen .content-box .personal-data label {
+    font-size: 20px;
+    font-family: "Futura_Book-Normal", sans-serif;
+    color: rgb(138, 136, 136);
+    margin: 0;
+    cursor: pointer;
+}
+
+.five-screen {
+    background: linear-gradient(rgb(48, 46, 46), rgb(48, 46, 46)) center no-repeat, url("../images/bg4.png") center 480px/ auto no-repeat, url("../images/bg5.png") center / cover repeat;
+    background-blend-mode: exclusion;
+    padding-top: 560px;
+    padding-bottom: 485px;
+}
+
+.five-screen .container .title {
+    text-align: center;
+    z-index: 1;
+    position: relative;
+    margin-bottom: 53px;
+}
+
+.five-screen .container .description {
+    display: grid;
+    grid-template:
+            "director rhomb certificates"
+            "director photos-factory certificates"
+            "director video-factory certificates";
+    justify-content: space-between;
+    margin: 0;
+}
+
+.five-screen .container .description .director {
+    width: 255px;
+    margin: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    grid-area: director;
+}
+
+.five-screen .container .description .director .ellipse {
+    width: 14px;
+    height: 14px;
+    margin-right: 11px;
+    margin-left: 0;
+}
+
+.five-screen .container .description .director .ellipse .ellipse-item {
+    border-radius: 50%;
+    background-color: rgb(68, 145, 255);
+    width: 14px;
+    height: 14px;
+    position: relative;
+    z-index: 1;
+}
+
+.five-screen .container .description .director .director-item {
+    z-index: 1;
+    font-family: "Futura_Book-Normal", sans-serif;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    margin: 0;
+}
+
+.five-screen .container .description .director .director-item .name {
+    z-index: 1;
+    font-size: 18px;
+}
+
+.five-screen .container .description .director .director-item .post {
+    z-index: 1;
+    font-size: 14px;
+}
+
+.five-screen .container .description .director img {
+    position: absolute;
+    left: -85px;
+    top: -95px;
+    z-index: 0;
+}
+
+.five-screen .container .quote,
+.five-screen .container .video,
+.five-screen .container .photos-factory {
+    z-index: 1;
+    margin: 0;
+}
+
+.five-screen .container .quote {
+    margin-bottom: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-area: rhomb;
+    max-width: 584px;
+}
+
+.five-screen .container .quote .rhomb {
+    width: 102px;
+    height: 102px;
+    background: url("../images/rhomb.png") center / auto no-repeat;
+    margin: 0;
+}
+
+.five-screen .container .quote .text {
+    font-size: 16px;
+    font-family: "Futura_Book-Normal", sans-serif;
+    color: rgb(255, 255, 255);
+    line-height: 1.2;
+    max-width: 440px;
+    margin: 0;
+}
+
+.five-screen .container .photos-factory {
+    margin-bottom: 30px;
+}
+
+.five-screen .container .photos-factory .subtitle,
+.five-screen .container .video .subtitle {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.five-screen .container .photos-factory .photos-items {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+
+}
+
+.five-screen .container .photos-factory .photos-items .photo-item {
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 259px;
+    height: 150px;
+    border-radius: 11px;
+    margin: 0;
+}
+
+.five-screen .container .photos-factory .photos-items .photo-item.first-image {
+    background-image: url("../images/factory.png");
+}
+
+.five-screen .container .photos-factory .photos-items .photo-item.second-image {
+    background-image: url("../images/factory2.png");
+}
+
+.five-screen .container .video .video-item {
+    background-image: url("../images/video.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 11px;
+    width: 573px;
+    height: 152px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.five-screen .container .video .video-item img:hover {
+    cursor: pointer;
+}
+
+.five-screen .container .certificates {
+    max-width: 160px;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    grid-area: certificates;
+}
+
+.five-screen .container .certificates .subtitle {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.five-screen .container .certificates .certificate-item {
+    border-radius: 10px;
+    width: 162px;
+    height: 219px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.five-screen .container .certificates .certificate-item {
+    border-radius: 10px;
+    width: 162px;
+    height: 219px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.five-screen .container .certificates .certificate-item.first-item {
+    background-image: url("../images/certificate.png");
+    margin-bottom: 60px;
+}
+
+.five-screen .container .certificates .certificate-item.second-item {
+    background-image: url("../images/certificate2.png");
+}
+
+.six-screen {
+    position: relative;
+    height: 0;
+}
+
+.six-screen .container {
+    position: relative;
+    top: -360px;
+    padding: 0 35px 75px 25px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(rgb(48, 46, 46), rgb(48, 46, 46)) center no-repeat, url("../images/bg6.png") center/ auto no-repeat, url("../images/bg5.png") center / cover repeat;
+    background-blend-mode: exclusion;
+    border-image: linear-gradient(to top, #b3b3b3 0%, transparent);
+    border-width: 0 1px 1px;
+    border-radius: 10px;
+    border-style: solid;
+    border-image-slice: 9;
+}
+
+.six-screen .container .six-screen-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.six-screen .container .text-block {
+    margin: 0;
+}
+
+.six-screen .container .text-block .title {
+    max-width: 440px;
+    margin: 0 0 65px;
+}
+
+.six-screen .container .text-block .title .subtitle {
+    text-transform: uppercase;
+}
+
+.six-screen .container .text-block .presents-items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.six-screen .container .text-block .presents-items .present-item .present-image {
+    display: flex;
+    align-items: flex-end;
+    justify-content: right;
+    border-radius: 8px;
+    background-color: rgb(59, 58, 58);
+    background-image: url("../images/present-bg.png");
+    width: 239px;
+    height: 185px;
+}
+
+.six-screen .container .text-block .presents-items .present-item .present-name {
+    font-size: 20px;
+    font-family: "Futura PT", sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+.seven-ten-screen {
+    background: linear-gradient(0deg, white, white), url("../images/bg7-10.png") top / auto no-repeat;
+    background-blend-mode: color;
+    margin-top: 190px;
+}
+
+.seven-ten-screen .container .seven-screen {
+    margin-bottom: 70px;
+}
+
+.seven-ten-screen .container .seven-screen .container-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    gap: 60px;
+}
+
+.seven-ten-screen .container .seven-screen .container-header .title-second {
+    max-width: 475px;
+    margin: 0;
+    font-size: 40px;
+    line-height: 1;
+}
+
+.seven-ten-screen .container .seven-screen .container-header .works-items {
+    margin: 0;
+    display: flex;
+    gap: 40px;
+}
+
+.seven-ten-screen .container .seven-screen .container-header .works-items .work-item {
+    margin: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.seven-ten-screen .container .seven-screen .container-header .works-items .work-item .work-ellipse {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.seven-ten-screen .container .seven-screen .container-header .works-items .work-item .work-ellipse .work-ellipse-item {
+    margin: 0;
+    border-radius: 50%;
+    background-color: rgb(68, 145, 255);
+    opacity: 0.31;
+    width: 14px;
+    height: 14px;
+}
+
+.seven-ten-screen .container .seven-screen .container-header .works-items .work-item .work-name {
+    margin: 0;
+    font-size: 20px;
+    font-family: "Futura_Book-Normal", sans-serif;
+    color: rgba(68, 145, 255, 0.8);
+    line-height: 1;
+
+}
+
+.seven-ten-screen .container .seven-screen .doors-reviews {
+    display: flex;
+    gap: 60px;
+}
+
+.seven-ten-screen .container .seven-screen .doors-reviews .door-review {
+    position: relative;
+}
+
+.seven-ten-screen .container .seven-screen .doors-reviews .door-review .door-images {
+    display: grid;
+    grid-template:
+            'door-image-first door-image-second'
+            'door-image-first door-image-third';
+    gap: 15px;
+}
+
+.seven-ten-screen .container .seven-screen .doors-reviews .door-review .door-images .door-image-first {
+    grid-area: door-image-first;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    width: 216px;
+    height: 395px;
+}
+
+.seven-ten-screen .container .seven-screen .doors-reviews .door-review .door-images .door-image-second,
+.seven-ten-screen .container .seven-screen .doors-reviews .door-review .door-images .door-image-third {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    width: 100px;
+    height: 190px;
+}
+
+.seven-ten-screen .container .seven-screen .doors-reviews .door-review .door-images .door-image-second {
+    grid-area: door-image-second;
+}
+
+.seven-ten-screen .container .seven-screen .doors-reviews .door-review .door-images .door-image-third {
+    grid-area: door-image-third;
+}
+
+.seven-ten-screen .container .seven-screen .doors-reviews .door-review.first-review .door-images .door-image-first {
+    background-image: url("../images/first-door/first-image.png");
+}
+
+.seven-ten-screen .container .seven-screen .doors-reviews .door-review.first-review .door-images .door-image-second {
+    background-image: url("../images/first-door/second-image.png");
+}
+
+.seven-ten-screen .container .seven-screen .doors-reviews .door-review.first-review .door-images .door-image-third {
+    background-image: url("../images/first-door/third-image.png");
+}
+
+.seven-ten-screen .container .seven-screen .doors-reviews .door-review.second-review .door-images .door-image-first {
+    background-image: url("../images/second-door/first-image.png");
+}
+
+.seven-ten-screen .container .seven-screen .doors-reviews .door-review.second-review .door-images .door-image-second {
+    background-image: url("../images/second-door/second-image.png");
+}
+
+.seven-ten-screen .container .seven-screen .doors-reviews .door-review.second-review .door-images .door-image-third {
+    background-image: url("../images/second-door/third-image.png");
+}
+
+.seven-ten-screen .container .seven-screen .doors-reviews .door-review.third-review .door-images .door-image-first {
+    background-image: url("../images/third-door/first-image.png");
+}
+
+.seven-ten-screen .container .seven-screen .doors-reviews .door-review.third-review .door-images .door-image-second {
+    background-image: url("../images/third-door/second-image.png");
+}
+
+.seven-ten-screen .container .seven-screen .doors-reviews .door-review.third-review .door-images .door-image-third {
+    background-image: url("../images/third-door/third-image.png");
+}
+
+.seven-ten-screen .container .seven-screen .doors-reviews .door-review .door-description {
+    display: flex;
+    align-items: center;
+}
+
+.seven-ten-screen .container .seven-screen .doors-reviews .door-review .door-description .door-name {
+    margin: 0;
+    font-size: 20px;
+    font-family: "Futura PT", sans-serif;
+    color: rgb(68, 145, 255);
+}
+
+.seven-ten-screen .container .seven-screen .doors-reviews .door-review .door-description .door-price {
+    margin: 6px 6px 0;
+    font-size: 14px;
+    font-family: "Futura_Book-Normal", sans-serif;
+    color: rgb(19, 19, 19);
+}
+
+.seven-ten-screen .container .seven-screen .doors-reviews .door-review .door-description .door-review-button {
+    margin-right: 55px;
+    font-size: 20px;
+    font-family: "Futura_Book-Normal", sans-serif;
+    color: rgb(19, 19, 19);
+    border-bottom: 2px dotted rgb(68, 145, 255);
+}
+
+.seven-ten-screen .container .seven-screen .doors-reviews .door-review .door-description .door-review-button:hover {
+    cursor: pointer;
+}
+
+.seven-ten-screen .container .seven-screen .doors-reviews .door-review .review {
+    display: flex;
+    align-items: center;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    background-color: rgb(229, 228, 228);
+    gap: 20px;
+    position: absolute;
+    right: 0;
+    bottom: 25px;
+    opacity: 0;
+}
+
+.seven-ten-screen .container .seven-screen .doors-reviews .door-review .review-person .review-person-image {
+    border-radius: 50%;
+    width: 53px;
+    height: 53px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.seven-ten-screen .container .seven-screen .doors-reviews .door-review.first-review .review-person .review-person-image {
+    background-image: url("../images/review/review1.png");
+}
+
+
+.seven-ten-screen .container .seven-screen .doors-reviews .door-review.second-review .review-person .review-person-image {
+    background-image: url("../images/review/review2.png");
+}
+
+
+.seven-ten-screen .container .seven-screen .doors-reviews .door-review.third-review .review-person .review-person-image {
+    background-image: url("../images/review/review3.png");
+}
+
+.seven-ten-screen .container .seven-screen .doors-reviews .door-review .review-person .review-person-name {
+    font-size: 13px;
+    font-family: "Futura PT", sans-serif;
+    color: rgb(68, 145, 255);
+}
+
+
+.seven-ten-screen .container .seven-screen .doors-reviews .door-review .review-text {
+    font-size: 11px;
+    font-family: "Montserrat", sans-serif;
+    color: rgb(19, 19, 19);
+    font-style: italic;
+    line-height: 2;
+    text-align: left;
+}
+
+.review-action {
+    animation: attenuationReview 5s 7s linear;
+}
+
+@keyframes attenuationReview {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.seven-ten-screen .container .feedbacks {
+    position: relative;
+}
+
+.seven-ten-screen .container .feedbacks .feedback-items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 70px;
+}
+
+.seven-ten-screen .container .feedbacks .feedback-items .feedback-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0;
+}
+
+.seven-ten-screen .container .feedbacks .feedback-items .feedback-item .feedback-item-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 13px;
+    border-radius: 50%;
+    background-color: rgb(221, 221, 221);
+    width: 109px;
+    height: 109px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.seven-ten-screen .container .feedbacks .feedback-items .feedback-item.first-feedback .feedback-item-image {
+    background-image: url("../images/feedback/woman.png");
+}
+
+.seven-ten-screen .container .feedbacks .feedback-items .feedback-item.second-feedback .feedback-item-image {
+    background-image: url("../images/feedback/man.png");
+}
+
+.seven-ten-screen .container .feedbacks .feedback-items .feedback-item .feedback-item-name {
+    font-size: 20px;
+    font-family: "Futura PT", sans-serif;
+    color: rgb(68, 145, 255);
+    margin-bottom: 25px;
+}
+
+.seven-ten-screen .container .feedbacks .feedback-items .feedback-item .feedback-item-text {
+    font-size: 17px;
+    font-family: "Montserrat", sans-serif;
+    color: rgb(19, 19, 19);
+    line-height: 1.333;
+    border-width: 2px;
+    border-color: rgba(68, 145, 255, 0.5);
+    border-style: dotted;
+    max-width: 500px;
+    max-height: 286px;
+    padding: 30px 45px;
+    box-sizing: border-box;
+    border-radius: 5px;
+
+}
+
+.seven-ten-screen .container .feedbacks .feedback-items .feedback-item .feedback-item-text .subtitle {
+    font-size: 18px;
+    color: rgb(68, 145, 255);
+    font-style: italic;
+    line-height: 1.333;
+}
+
+
+.seven-ten-screen .container .feedbacks  .feedback-left,
+.seven-ten-screen .container .feedbacks  .feedback-right {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    width: 30px;
+    height: 100%;
+    z-index: 15;
+}
+
+.seven-ten-screen .container .feedbacks  .feedback-left {
+    left: 10px;
+    background: url("../images/arrow-left.png") center 20px / 10px 25px no-repeat;
+}
+
+.seven-ten-screen .container .feedbacks  .feedback-right {
+    right: 10px;
+    background: url("../images/arrow-right.png") center 20px / 10px 25px no-repeat;
+}
+
+.seven-ten-screen .container .feedbacks  .feedback-pagination {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.seven-ten-screen .container .master {
+    background: linear-gradient(rgb(47, 46, 46), rgb(47, 46, 46)), url("../images/bgMaster.png") right top / auto no-repeat, url("../images/bg5.png") right top / auto no-repeat;
+    background-blend-mode: exclusion;
+    padding: 35px 60px;
+    box-sizing: border-box;
+    border-radius: 11px;
+    width: 1045px;
+    display: flex;
+    margin-bottom: 120px;
+}
+
+.seven-ten-screen .container .master .master-first-block {
+    max-width: 460px;
+    margin: 0;
+}
+
+.seven-ten-screen .container .master .master-first-block .title-two {
+    font-size: 26px;
+    font-family: "Futura PT", sans-serif;
+    color: rgb(255, 255, 255);
+    margin: 63px 0 25px;
+}
+
+.seven-ten-screen .container .master .master-first-block .works-measuring {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+    margin-bottom: 70px;
+}
+
+.seven-ten-screen .container .master .master-first-block .works-measuring .works-measuring-item {
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.seven-ten-screen .container .master .master-first-block .works-measuring .works-measuring-item .circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 15px 0 0;
+    border-radius: 50%;
+    width: 23px;
+    height: 23px;
+    background-color: rgb(228, 228, 228);
+    background-image: url("../images/checkbox.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+.seven-ten-screen .container .master .master-first-block .works-measuring .works-measuring-item .works-measuring-text {
+    margin: 0;
+    font-size: 20px;
+    font-family: "Futura_Book-Normal", sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+.seven-ten-screen .container .master .master-first-block .master-action .button {
+    width: 242px;
+    height: 61px;
+    border-radius: 9px;
+    background-image: -moz-linear-gradient(-90deg, rgb(149, 216, 247) 0%, rgb(68, 145, 255) 100%);
+    background-image: -webkit-linear-gradient(-90deg, rgb(149, 216, 247) 0%, rgb(68, 145, 255) 100%);
+    background-image: -ms-linear-gradient(-90deg, rgb(149, 216, 247) 0%, rgb(68, 145, 255) 100%);
+    box-shadow: 0 4px 0 0 rgba(45, 135, 255, 0.75), inset 2px 4px 5px 0 rgba(190, 228, 252, 0.004);
+}
+
+.seven-ten-screen .container .master .second-master-block {
+    display: flex;
+}
+
+.seven-ten-screen .container .master .second-master-block .master-image {
+    position: relative;
+    width: 350px;
+}
+
+.seven-ten-screen .container .master .second-master-block .master-image .master-first-image {
+    position: absolute;
+    bottom: -35px;
+    left: -35px;
+    z-index: 1;
+}
+
+.seven-ten-screen .container .master .second-master-block .master-image .master-second-image {
+    position: absolute;
+    bottom: -35px;
+    left: -35px;
+    z-index: 0;
+}
+
+.seven-ten-screen .container .master .second-master-block .master-description {
+    display: flex;
+    position: relative;
+    top: 155px;
+    z-index: 3;
+
+}
+
+.seven-ten-screen .container .master .second-master-block .master-description .circle {
+    width: 14px;
+    height: 14px;
+    margin-right: 10px;
+    position: relative;
+    top: 2px;
+}
+
+.seven-ten-screen .container .master .second-master-block .master-description .circle .circle-item {
+    border-radius: 50%;
+    background-color: rgb(68, 145, 255);
+    width: 14px;
+    height: 14px;
+}
+
+.seven-ten-screen .container .master .second-master-block .master-description .master-item .master-name {
+    font-size: 18px;
+    font-family: "Futura_Book-Normal", sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+.seven-ten-screen .container .master .second-master-block .master-description .master-item .master-post {
+    font-size: 14px;
+    font-family: "Futura_Book-Normal", sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+.seven-ten-screen .container .questions {
+    max-width: 980px;
+    margin-bottom: 81px;
+}
+
+.seven-ten-screen .container .questions .title-second {
+    margin-bottom: 48px;
+}
+
+.seven-ten-screen .container .questions .contacts-info {
+    display: grid;
+    grid-template:
+            'manager-item social-nets phone-numbers contact-form'
+            'manager-item time-to-work time-to-work contact-form';
+    gap: 40px;
+}
+
+.seven-ten-screen .container .questions .contacts-info .manager-item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    max-width: 187px;
+    grid-area: manager-item;
+}
+
+.seven-ten-screen .container .questions .contacts-info .manager-item .manager-item-photo {
+    border-radius: 50%;
+    width: 187px;
+    height: 187px;
+    background: url("../images/manager_big.png") center / auto no-repeat;
+    position: relative;
+}
+
+.seven-ten-screen .container .questions .contacts-info .manager-item .manager-item-photo .circle {
+    border-radius: 50%;
+    background-color: rgb(53, 174, 16);
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    z-index: 1;
+    bottom: 22px;
+    right: 22px;
+}
+
+.seven-ten-screen .container .questions .contacts-info .manager-item .manager-item-name {
+    font-size: 18px;
+    font-family: "Futura_Book-Normal", sans-serif;
+    color: rgb(28, 28, 28);
+
+}
+
+.seven-ten-screen .container .questions .contacts-info .social-nets {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 22px;
+    grid-area: social-nets;
+    margin: 0;
+}
+
+.seven-ten-screen .container .questions .contacts-info .social-nets .social-net-item {
+    font-size: 18px;
+    font-family: "Futura_Book-Normal", sans-serif;
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.seven-ten-screen .container .questions .contacts-info .social-nets .social-net-item.telegram-item {
+    color: rgba(41, 167, 232, 0.502);
+}
+
+.seven-ten-screen .container .questions .contacts-info .social-nets .social-net-item.viber-item {
+    color: rgba(102, 92, 172, 0.502);
+}
+
+.seven-ten-screen .container .questions .contacts-info .social-nets .social-net-item .button-image {
+    margin-right: 15px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+    margin-left: 0;
+}
+
+.seven-ten-screen .container .questions .contacts-info .social-nets .social-net-item.telegram-item .button-image {
+    background: url("../images/telegram.png") center / cover no-repeat;
+}
+
+.seven-ten-screen .container .questions .contacts-info .social-nets .social-net-item.viber-item .button-image {
+    background: url("../images/viber.png") center / cover no-repeat;
+}
+
+.seven-ten-screen .container .questions .contacts-info .phone-numbers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 37px;
+    grid-area: phone-numbers;
+}
+
+.seven-ten-screen .container .questions .contacts-info .phone-numbers .phone-number {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.seven-ten-screen .container .questions .contacts-info .phone-numbers .phone-number a {
+    font-size: 20px;
+    font-family: "Futura PT", sans-serif;
+    color: rgb(19, 19, 19);
+    text-decoration: none;
+}
+
+.seven-ten-screen .container .questions .contacts-info .phone-numbers .phone-text {
+    font-size: 18px;
+    font-family: "Futura_Book-Normal", sans-serif;
+    color: rgba(79, 80, 80, 0.502);
+    margin: 0;
+}
+
+.seven-ten-screen .container .questions .contacts-info .phone-numbers .phone-text.small-text {
+    display: none;
+    text-align: center;
+}
+
+.seven-ten-screen .container .questions .contacts-info .time-to-work {
+    font-size: 14px;
+    font-family: "Futura_Book-Normal", sans-serif;
+    color: rgb(136, 135, 135);
+    grid-area: time-to-work;
+}
+
+.seven-ten-screen .container .questions .contacts-info .contact-form {
+    padding: 15px 0 15px 49px;
+    border-left: 1px solid rgb(186, 186, 186);
+    grid-area: contact-form;
+}
+
+.seven-ten-screen .container .questions .contacts-info .contact-form .inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+    margin-bottom: 32px;
+    align-items: flex-start;
+}
+
+.seven-ten-screen .container .questions .contacts-info .contact-form .inputs .input-item .contact-input {
+    border-width: 1px;
+    border-color: rgb(68, 145, 255);
+    border-style: solid;
+    border-radius: 8px;
+    width: 198px;
+    height: 48px;
+    padding: 18px 16px;
+    box-sizing: border-box;
+    font-size: 18px;
+    font-family: "Futura_Book-Normal", sans-serif;
+    color: rgba(79, 80, 80, 0.502);
+    margin-bottom: 5px;
+}
+
+.seven-ten-screen .container .questions .contacts-info .contact-form .inputs .input-item .contact-input.error {
+    border-color: rgb(255, 0, 0);
+}
+
+.seven-ten-screen .container .questions .contacts-info .contact-form .button {
+    border-radius: 7px;
+    width: 198px;
+    height: 49px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 0;
+    font-family: "Futura PT", sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 17px;
+}
+
+.seven-ten-screen .container .map {
+    max-width: 980px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 68px;
+}
+
+.seven-ten-screen .container .map .address-gallery {
+    display: grid;
+    gap: 15px 10px;
+    grid-template:
+            'first-image second-image'
+            'first-image third-image'
+            'address-title bottom-line';
+    grid-area: galery-photos;
+    margin: 0;
+}
+
+.seven-ten-screen .container .map .address-gallery .first-image {
+    grid-area: first-image;
+    width: 350px;
+    height: 195px;
+    background: url("../images/map-door/salon1.png") center / cover no-repeat;
+}
+
+.seven-ten-screen .container .map .address-gallery .second-image {
+    grid-area: second-image;
+    width: 139px;
+    height: 90px;
+    background: url("../images/map-door/salon2.png") center / cover no-repeat;
+}
+
+.seven-ten-screen .container .map .address-gallery .third-image {
+    grid-area: third-image;
+    border-radius: 10px;
+    background: url("../images/map-door/salon3.png") center / cover no-repeat;
+    width: 139px;
+    height: 90px;
+}
+
+.seven-ten-screen .container .map .address-gallery .address-title {
+    max-width: 305px;
+    color: rgb(19, 19, 19);
+    font-family: "Futura_Book-Normal", sans-serif;
+    text-align: right;
+    margin: 0;
+    font-size: 20px;
+    font-weight: 400;
+    grid-area: address-title;
+}
+
+.seven-ten-screen .container .map .address-gallery .bottom-line {
+    grid-area: bottom-line;
+    border-bottom: 1px solid black;
+    width: 100%;
+    height: 90%;
+}
+
+.seven-ten-screen .container .map .address-gallery .address-title span {
+    font-size: 20px;
+    color: rgb(19, 19, 19);
+    font-family: "Futura PT", sans-serif;
+}
+
+.seven-ten-screen .container .map .map-container {
+    border-radius: 10px;
+    width: 412px;
+    height: 249px;
+    overflow: hidden;
+    margin: 0;
+}
+
+.seven-ten-screen .container .footer {
+    max-width: 980px;
+    display: flex;
+    align-items: center;
+    gap: 54px;
+    padding-bottom: 17px;
+}
+
+.seven-ten-screen .container .logo {
+    margin: 0;
+}
+
+.seven-ten-screen .container .footer .footer-item {
+    margin: 0;
+    font-size: 16px;
+    font-family: "Futura_Book-Normal", sans-serif;
+    color: rgb(114, 113, 113);
+}
+
+.seven-ten-screen .container .footer .footer-item.links:hover {
+    cursor: pointer;
+}
+
+@keyframes flareAnimation {
+    0% {
+        left: -150%;
+    }
+    100% {
+        left: 150%;
+    }
+}
+
+dialog {
+    color: hsl(0deg 1% 26%);
+    border: 0;
+    animation: move-in 0.3s;
+    box-shadow: rgba(0, 0, 0, 0.5) 0 0 10px;
+    margin: auto;
+    box-sizing: border-box;
+    padding: 33px 33px 20px;
+    overflow: visible;
+
+    border-radius: 10px;
+    width: 364px;
+    z-index: 244;
+    background-blend-mode: exclusion;
+    background: linear-gradient(180deg, rgb(47, 46, 46), rgb(47, 46, 46)), url("../images/bg5.png") center / cover no-repeat, url("../images/dialog-bg.png") 24px 131px / auto no-repeat;
+}
+
+dialog .container {
+    position: relative;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+dialog .container .title {
+    font-size: 38px;
+    margin-bottom: 17px;
+    text-align: center;
+}
+
+dialog .container .dialog-subtitle {
+    font-size: 13px;
+    font-family: "Futura_Book-Normal", sans-serif;
+    color: rgb(203, 202, 202);
+    line-height: 1.385;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+dialog .container .dialog-form {
+    display: flex;
+    flex-direction: column;
+}
+
+dialog .container .dialog-form .form-title {
+    text-align: center;
+    font-size: 20px;
+    font-family: "Futura_Book-Normal", sans-serif;
+    color: rgb(255, 255, 255);
+
+}
+
+dialog .container .dialog-form .input-item {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 0 15px;
+}
+
+dialog .container .dialog-form .input-item .input {
+    font-size: 18px;
+    font-family: "Futura_Book-Normal", sans-serif;
+    color: rgba(152, 153, 153, 0.502);
+
+    border-width: 1px;
+    border-color: rgb(68, 145, 255);
+    border-style: solid;
+    border-radius: 10px;
+    width: 100%;
+    height: 47px;
+    padding: 18px 41px;
+    box-sizing: border-box;
+    background: transparent;
+}
+
+dialog .container .dialog-form .input-item .input.error {
+    border-color: rgb(255, 0, 0);
+}
+
+dialog .container .dialog-form .input-item .label {
+    position: absolute;
+    left: 11px;
+    top: 13px;
+}
+
+dialog .container .dialog-form .button {
+    border-radius: 9px;
+    width: 100%;
+    height: 49px;
+    font-family: "Futura PT", sans-serif;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    z-index: 2;
+}
+
+dialog .container .dialog-form .button:disabled {
+    color: rgb(255, 255, 255);
+    cursor: not-allowed;
+    background-image: -moz-linear-gradient(-90deg, rgb(84, 84, 84) 0%, rgb(84, 84, 84) 100%);
+    background-image: -webkit-linear-gradient(-90deg, rgb(84, 84, 84) 0%, rgb(84, 84, 84) 100%);
+    background-image: -ms-linear-gradient(-90deg, rgb(84, 84, 84) 0%, rgb(84, 84, 84) 100%);
+    box-shadow: 0 2px 0 0 rgba(84, 84, 84, 100%),
+    inset 2px 3px 5px 0 rgba(84, 84, 84, 0);
+}
+
+
+dialog .container .close-button {
+    opacity: 0.749;
+    position: absolute;
+    right: -19px;
+    top: -10px;
+    width: 18px;
+    height: 19px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+}
+
+dialog .container .agree {
+    display: flex;
+    align-items: center;
+    margin-top: 23px;
+    gap: 6px;
+    justify-content: flex-start;
+}
+
+dialog .container .agree input {
+    border-radius: 2px;
+    width: 10px;
+    height: 10px;
+    margin: 0;
+    cursor: pointer;
+}
+
+dialog .container .agree label {
+    font-size: 8px;
+    font-family: "Futura_Book-Normal", sans-serif;
+    color: rgb(138, 136, 136);
+    line-height: 1.2;
+    margin: 0;
+}
+
+dialog .container .background {
+    position: absolute;
+    left: 188px;
+    bottom: -47px;
+    z-index: 0;
+    opacity: 1;
+}
+
+
+dialog#dialog-catalog .container .title {
+    font-size: 38px;
+    line-height: 1.053;
+}
+
+dialog#dialog-catalog .container .dialog-form .action-block-messages {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 31px;
+    margin: 22px 0 32px;
+}
+
+dialog#dialog-catalog .container .dialog-form .action-block-messages .action-block-messages-button {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    font-size: 16px;
+    font-family: "Futura_Book-Normal", sans-serif;
+    color: rgb(96, 94, 94);
+}
+
+dialog#dialog-catalog .container .dialog-form .action-block-messages .action-block-messages-button:hover {
+    cursor: pointer;
+}
+
+dialog#dialog-catalog .container .dialog-form .action-block-messages .action-block-messages-button .button-image {
+    width: 41px;
+    height: 41px;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    margin: 0 11px 0 0;
+}
+
+dialog#dialog-catalog .container .dialog-form .action-block-messages .action-block-messages-button .button-image .flare {
+    display: none;
+}
+
+dialog#dialog-catalog .container .dialog-form .action-block-messages .action-block-messages-button.active .button-image .flare {
+    display: block;
+}
+
+dialog#dialog-catalog .container .dialog-form .action-block-messages .action-block-messages-button .button-image {
+    margin: 0 11px 0 0;
+    width: 41px;
+    height: 41px;
+}
+
+dialog#dialog-catalog .container .dialog-form .action-block-messages .action-block-messages-button.telegram-button.active {
+    color: rgb(41, 169, 235);
+}
+
+dialog#dialog-catalog .container .dialog-form .action-block-messages .action-block-messages-button.telegram-button .button-image {
+    background-image: url("../images/telegram_not_active.png");
+}
+
+dialog#dialog-catalog .container .dialog-form .action-block-messages .action-block-messages-button.telegram-button.active .button-image {
+    background-image: url("../images/telegram.png");
+}
+
+dialog#dialog-catalog .container .dialog-form .action-block-messages .action-block-messages-button.viber-button.active {
+    color: rgb(102, 92, 172);
+}
+
+dialog#dialog-catalog .container .dialog-form .action-block-messages .action-block-messages-button.viber-button .button-image {
+    background-image: url("../images/viber_not_active.png");
+}
+
+dialog#dialog-catalog .container .dialog-form .action-block-messages .action-block-messages-button.viber-button.active .button-image {
+    background-image: url("../images/viber.png");
+}
+
+dialog#dialog-catalog .container .dialog-form .action-block-inputs {
+    width: 100%;
+    margin-bottom: 23px;
+}
+
+dialog#dialog-catalog .container .dialog-form .action-block-inputs .input {
+    width: 100%;
+    padding: 18px 28px;
+    box-sizing: border-box;
+    display: none;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: transparent;
+    border: 1px solid #302e2e;
+    border-radius: 8px;
+    font-size: 20px;
+    font-family: "Futura_Book-Normal", sans-serif;
+    color: rgb(193, 192, 192);
+}
+
+dialog#dialog-catalog .container .dialog-form .action-block-inputs .input.active {
+    display: flex;
+}
+
+dialog#dialog-catalog .container .dialog-form .action-block-inputs .input.active.error {
+    border-color: red;
+}
+
+dialog#dialog-catalog .container .dialog-form .action-block-inputs .input.telegram-input {
+    border: 1px solid #5071a2;
+}
+
+dialog#dialog-catalog .container .dialog-form .action-block-inputs .input.viber-input {
+    border: 1px solid #5b567b;
+}
+
+dialog#dialog-catalog .container .background {
+    right: -52px;
+    bottom: -67px;
+    left: unset;
+}
+
+dialog#dialog-consultation .container .background {
+    right: -45px;
+    bottom: -22px;
+    left: unset;
+}
+
+dialog#dialog-order .container .background {
+    right: -56px;
+    bottom: -67px;
+    left: unset;
+}
+
+dialog#dialog-sizes .container .background {
+    right: -45px;
+    bottom: -40px;
+    left: unset;
+}
+
+dialog#dialog-check {
+    box-sizing: content-box;
+}
+
+dialog#dialog-check .container {
+    text-align: center;
+}
+
+dialog#dialog-check .container .expect {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-family: "Futura_Book-Normal", sans-serif;
+    color: rgb(203, 202, 202);
+    margin-top: 53px;
+}
+
+dialog#dialog-check .container .expect img {
+    margin: 0 30px 0 0;
+}
+
+
+dialog::backdrop {
+    background-color: rgba(30, 30, 30, 0.7);
+    animation: fade-in 0.3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fade-in {
+    from {
+        backdrop-filter: blur(0px);
+    }
+
+    to {
+        backdrop-filter: blur(8px);
+    }
+
+}
+
+@keyframes move-in {
+    from {
+        translate: 0 10px;
+        opacity: 0;
+    }
+
+    to {
+        translate: 0;
+        opacity: 1;
+    }
+
+}
