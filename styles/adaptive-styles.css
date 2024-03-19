@@ -680,7 +680,7 @@
     }
 
     .seven-ten-screen .container .questions {
-        max-width: 270px;
+        width: 270px;
     }
 
     .seven-ten-screen .container .questions .contacts-info {
@@ -761,7 +761,7 @@
     }
 
     .seven-ten-screen .container .map {
-        max-width: 270px;
+        width: 270px;
         flex-direction: column;
     }
 
@@ -798,7 +798,7 @@
     }
 
     .seven-ten-screen .container .footer {
-        max-width: 270px;
+        width: 270px;
         gap: 15px;
     }
 
