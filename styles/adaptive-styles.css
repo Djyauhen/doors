@@ -370,6 +370,11 @@
         right: unset;
         left: -10%;
         z-index: 0;
+        max-width: 320px;
+    }
+
+    .four-screen .content-box .airplane img {
+        width: 320px;
     }
 
     .four-screen .content-box .four-screen-content-image {
@@ -797,7 +802,7 @@
         gap: 15px;
     }
 
-    .seven-ten-screen .container .footer img{
+    .seven-ten-screen .container .footer img {
         width: 40px;
     }
 
