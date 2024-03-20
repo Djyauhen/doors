@@ -28,6 +28,14 @@
         margin-bottom: 35px;
     }
 
+    .first-screen .header .container .logo {
+        width: 50px;
+    }
+
+    .first-screen .header .container .logo img {
+        width: 100%;
+    }
+
     .first-screen .header .container .contacts {
         display: grid;
         grid-template:
@@ -115,6 +123,7 @@
         margin-bottom: 18px;
         grid-area: title;
         max-width: 320px;
+        font-size: 20px;
     }
 
     .first-screen .main-screen .container .main-screen-description .main-screen-door-image-mobile {
@@ -138,13 +147,39 @@
         max-width: 320px;
     }
 
+    .first-screen .main-screen .container .main-screen-description .main-screen-advantages .main-screen-advantages-items .main-screen-advantages-item .main-screen-advantages-item-image {
+        margin-bottom: 10px;
+        font-size: 40px;
+        height: 40px;
+        position: relative;
+
+    }
+
+    .first-screen .main-screen .container .main-screen-description .main-screen-advantages .main-screen-advantages-items .main-screen-advantages-item .main-screen-advantages-item-image img{
+        position: relative;
+        bottom: 0;
+    }
+
+    .first-screen .main-screen .container .main-screen-description .main-screen-advantages .main-screen-advantages-items .main-screen-advantages-item .main-screen-advantages-item-title {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+
     .first-screen .main-screen .container .main-screen-description .main-screen-advantages .main-screen-advantages-items .main-screen-advantages-item .main-screen-advantages-item-text {
         text-align: center;
+        max-width: 205px;
+        font-size: 11px;
+        margin-bottom: 20px;
     }
 
     .first-screen .main-screen .container .main-screen-description .main-screen-advantages .main-screen-advantages-left,
     .first-screen .main-screen .container .main-screen-description .main-screen-advantages .main-screen-advantages-right {
         display: flex;
+    }
+
+
+    .first-screen .main-screen .container .main-screen-description .main-screen-advantages .main-screen-pagination {
+        display: block;
     }
 
     .first-screen .main-screen .container .main-screen-description .button {

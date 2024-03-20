@@ -322,19 +322,31 @@
     justify-content: center;
     position: absolute;
     top: 0;
-    width: 30px;
+    width: 20px;
     height: 100%;
     z-index: 15;
 }
 
 .first-screen .main-screen .container .main-screen-description .main-screen-advantages .main-screen-advantages-left {
     left: 10px;
-    background: url("../images/icons/arrow-left.png") center / auto no-repeat;
+    background: url("../images/icons/arrow-left.png") center 60% / 100% no-repeat;
 }
 
 .first-screen .main-screen .container .main-screen-description .main-screen-advantages .main-screen-advantages-right {
     right: 10px;
-    background: url("../images/icons/arrow-right.png") center / auto no-repeat;
+    background: url("../images/icons/arrow-right.png") center 60% / 100% no-repeat;
+}
+
+.first-screen .main-screen .container .main-screen-description .main-screen-advantages .main-screen-pagination {
+    position: absolute;
+    bottom: 5px;
+    left: calc(50% - 25px);
+    width: 50px;
+    display: none;
+}
+
+.first-screen .main-screen .container .main-screen-description .main-screen-advantages .main-screen-pagination .swiper-pagination-bullet-active {
+    background: #FFFFFF;
 }
 
 .first-screen .main-screen .container .main-screen-description .main-screen-advantages .main-screen-advantages-items .main-screen-advantages-item {
@@ -1784,8 +1796,8 @@
 }
 
 
-.seven-ten-screen .container .feedbacks  .feedback-left,
-.seven-ten-screen .container .feedbacks  .feedback-right {
+.seven-ten-screen .container .feedbacks .feedback-left,
+.seven-ten-screen .container .feedbacks .feedback-right {
     display: none;
     align-items: center;
     justify-content: center;
@@ -1796,17 +1808,17 @@
     z-index: 15;
 }
 
-.seven-ten-screen .container .feedbacks  .feedback-left {
+.seven-ten-screen .container .feedbacks .feedback-left {
     left: 10px;
     background: url("../images/arrow-left.png") center 20px / 10px 25px no-repeat;
 }
 
-.seven-ten-screen .container .feedbacks  .feedback-right {
+.seven-ten-screen .container .feedbacks .feedback-right {
     right: 10px;
     background: url("../images/arrow-right.png") center 20px / 10px 25px no-repeat;
 }
 
-.seven-ten-screen .container .feedbacks  .feedback-pagination {
+.seven-ten-screen .container .feedbacks .feedback-pagination {
     display: none;
     align-items: center;
     justify-content: center;

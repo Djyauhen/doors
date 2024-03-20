@@ -468,7 +468,8 @@ function adaptiveScreenWidth() {
         navigation: {
             nextEl: '.main-screen-advantages-right',
             prevEl: '.main-screen-advantages-left',
-        }
+        },
+        pagination: {el: '.main-screen-pagination.swiper-pagination'}
     });
     const reviewSlider = new Swiper(feedbackSlidesContainer, {
         slidesPerView: 1,
