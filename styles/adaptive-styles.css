@@ -6,12 +6,12 @@
     }
 
     .title {
-        font-size: 23px;
+        font-size: 26px;
         text-align: center;
     }
 
     .title-second, .subtitle {
-        font-size: 23px;
+        font-size: 26px;
         text-align: center;
     }
 
@@ -155,7 +155,7 @@
 
     }
 
-    .first-screen .main-screen .container .main-screen-description .main-screen-advantages .main-screen-advantages-items .main-screen-advantages-item .main-screen-advantages-item-image img{
+    .first-screen .main-screen .container .main-screen-description .main-screen-advantages .main-screen-advantages-items .main-screen-advantages-item .main-screen-advantages-item-image img {
         position: relative;
         bottom: 0;
     }
@@ -232,8 +232,13 @@
     }
 
     .second-screen .container .container-div .advantages .advantages-title {
-        margin: 0 0 38px;
-        max-width: 320px;
+        margin: 0 auto 38px;
+        max-width: 270px;
+    }
+
+    .second-screen .container .container-div .advantages .advantages-title,
+    .second-screen .container .container-div .advantages .advantages-title .subtitle {
+        font-size: 26px;
     }
 
     .second-screen .container .container-div .advantages .advantages-block .advantages-action {
@@ -249,9 +254,13 @@
         margin-bottom: 50px;
     }
 
+    .second-screen .container .container-div .advantages .advantages-block .advantages-items .dont-show {
+        display: none;
+    }
+
     .second-screen .container .container-div .advantages .advantages-block .advantages-items .advantage-item {
         gap: 6px;
-        font-size: 12px;
+        font-size: 11px;
         align-items: flex-start;
     }
 
@@ -312,7 +321,7 @@
     }
 
     .third-screen .dignities .container .dignities-items .dignity-item .dignity-item-description {
-        text-align: center;
+        font-size: 13px;
     }
 
     .third-screen .doors .container .title-second {
@@ -331,12 +340,21 @@
             'door-action';
     }
 
+    .third-screen .doors .container .doors-container .doors-items .door-item .door-main-image {
+        margin-bottom: 18px;
+    }
+
+    .third-screen .doors .container .doors-container .doors-items .door-item .door-description {
+        margin-bottom: 25px;
+    }
+
     .third-screen .doors .container .doors-container .doors-items .door-item .door-characteristic {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         align-items: start;
         gap: 15px;
         max-width: 320px;
+        margin-bottom: 30px;
     }
 
     .third-screen .doors .container .doors-container .doors-items .door-item .door-characteristic .door-all-photos {
@@ -379,7 +397,12 @@
 
     .four-screen .content-box .title {
         grid-area: title;
-        max-width: 320px;
+        max-width: 340px;
+    }
+
+    .four-screen .content-box .title,
+    .four-screen .content-box .title .subtitle {
+        font-size: 23px;
     }
 
     .four-screen .content-box .catalog-image {
@@ -423,13 +446,23 @@
         bottom: 10px;
     }
 
+    .four-screen .content-box .four-screen-content-image .first-image {
+        top: -10px;
+        left: -10px;
+    }
+
+    .four-screen .content-box .four-screen-content-image .second-image {
+        top: 0;
+        left: 0;
+    }
+
     .four-screen .content-box .pdf {
         display: none;
     }
 
     .four-screen .content-box .four-screen-action-block {
         grid-area: action-block;
-        width: 220px;
+        width: 270px;
         z-index: 5;
     }
 
@@ -455,7 +488,7 @@
 
     .five-screen {
         padding-top: 0;
-        background: linear-gradient(rgb(48, 46, 46), rgb(48, 46, 46)) center no-repeat, url("../images/bg4.png") center top/ auto no-repeat, url("../images/bg5.png") center / cover repeat;
+        background: linear-gradient(rgb(48, 46, 46), rgb(48, 46, 46)) center no-repeat, url(../images/bg4.png) center 30px / 250% no-repeat, url(../images/bg5.png) center / cover repeat;
         padding-bottom: 60px;
     }
 
@@ -477,11 +510,22 @@
     .five-screen .container .description .director .ellipse {
         position: relative;
         left: 130px;
+        top: -15px;
     }
 
     .five-screen .container .description .director .director-item {
         position: relative;
         left: 135px;
+    }
+
+    .five-screen .container .description .director .director-item .name {
+        width: 150px;
+        margin-left: 0;
+    }
+
+    .five-screen .container .description .director .director-item .post {
+        width: 75px;
+        margin-left: 0;
     }
 
     .five-screen .container .description .director img {
@@ -506,6 +550,7 @@
         font-family: "Montserrat", sans-serif;
         font-style: italic;
         max-width: 220px;
+        opacity: 0.7;
     }
 
     .five-screen .container .quote .text span {
@@ -530,6 +575,7 @@
     .five-screen .container .photos-factory .subtitle,
     .five-screen .container .video .subtitle {
         margin-bottom: 25px;
+        margin-top: 35px;
     }
 
     .five-screen .container .photos-factory .photos-items {
@@ -581,17 +627,19 @@
     }
 
     .six-screen .container .text-block .title {
-        max-width: 320px;
+        max-width: 287px;
         margin: 0 0 27px;
     }
 
     .six-screen .container .text-block .presents-items {
+        gap: 40px;
         justify-content: center;
         flex-direction: column;
     }
 
     .six-screen .container .text-block .presents-items .present-item .present-name {
         text-align: center;
+        margin-top: 15px;
     }
 
     .seven-ten-screen {
@@ -643,6 +691,10 @@
         display: flex;
     }
 
+    .seven-ten-screen .container .feedbacks .feedback-pagination {
+        margin-bottom: 67px;
+    }
+
 
     .seven-ten-screen .container .feedbacks .feedback-items .feedback-item .feedback-item-text {
         font-size: 12px;
@@ -664,6 +716,8 @@
         position: relative;
         background: linear-gradient(rgb(47, 46, 46), rgb(47, 46, 46)), url(../images/bgMaster.png) center / cover no-repeat, url(../images/bg5.png) right top / auto no-repeat;
         box-sizing: border-box;
+        left: -10px;
+        margin-bottom: 70px;
     }
 
     .seven-ten-screen .container .master .master-first-block {
@@ -684,25 +738,39 @@
         max-width: 320px;
         height: 400px;
         position: absolute;
-        top: 150px;
+        top: 130px;
     }
 
     .seven-ten-screen .container .master .second-master-block .master-image .master-first-image {
         position: absolute;
         bottom: 0;
-        left: -10px;
+        left: 0;
         z-index: 1;
-        width: 340px;
+        width: 320px;
     }
 
     .seven-ten-screen .container .master .second-master-block .master-description {
-        top: 50px;
-        left: 0;
+        top: 70px;
+        left: -220px;
         z-index: 3;
     }
 
+    .seven-ten-screen .container .master .second-master-block .master-description .master-item .master-post {
+        font-size: 10px;
+        width: 150%;
+    }
+
     .seven-ten-screen .container .master .second-master-block .master-description .circle {
-        top: 80px;
+        top: 90px;
+        left: 90px;
+    }
+
+    .seven-ten-screen .container .master .second-master-block .master-description .master-item .master-name {
+        font-size: 14px;
+    }
+
+    .seven-ten-screen .container .master .master-first-block .works-measuring {
+        margin-left: 27px;
     }
 
     .seven-ten-screen .container .master .master-first-block .works-measuring .works-measuring-item .works-measuring-text {
@@ -715,12 +783,18 @@
         height: 17px;
     }
 
+
     .seven-ten-screen .container .master .master-first-block .master-action {
         display: flex;
     }
 
     .seven-ten-screen .container .questions {
         width: 270px;
+        margin-bottom: 35px;
+    }
+
+    .seven-ten-screen .container .questions .title-second {
+        margin-bottom: 17px;
     }
 
     .seven-ten-screen .container .questions .contacts-info {
@@ -729,7 +803,7 @@
         "contact-form contact-form"
         "manager-item phone-numbers"
         "manager-item social-nets";
-        gap: 40px 10px;
+        gap: 17px;
         max-width: 270px;
     }
 
@@ -742,6 +816,7 @@
     .seven-ten-screen .container .questions .contacts-info .contact-form {
         padding: 0;
         border-left: 0;
+        margin-bottom: 17px;
     }
 
     .seven-ten-screen .container .questions .contacts-info .contact-form .inputs .input-item .contact-input,
@@ -768,6 +843,7 @@
 
     .seven-ten-screen .container .questions .contacts-info .phone-numbers {
         gap: 5px;
+        justify-content: flex-end;
     }
 
     .seven-ten-screen .container .questions .contacts-info .phone-numbers .phone-number a {
@@ -803,10 +879,12 @@
     .seven-ten-screen .container .map {
         width: 270px;
         flex-direction: column;
+        margin-bottom: 30px;
     }
 
     .seven-ten-screen .container .map .address-gallery {
         gap: 5px;
+        margin-bottom: 25px;
     }
 
     .seven-ten-screen .container .map .address-gallery .first-image {
@@ -822,7 +900,7 @@
 
     .seven-ten-screen .container .map .address-gallery .address-title {
         max-width: 165px;
-        font-size: 11px;
+        font-size: 10px;
     }
 
     .seven-ten-screen .container .map .address-gallery .address-title span {
@@ -839,7 +917,7 @@
 
     .seven-ten-screen .container .footer {
         width: 270px;
-        gap: 15px;
+        gap: 10px;
     }
 
     .seven-ten-screen .container .footer img {
