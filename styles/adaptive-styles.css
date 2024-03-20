@@ -186,9 +186,10 @@
         flex-direction: column-reverse;
         z-index: 10;
     }
+
     .second-screen .container .container-div .background-image {
         display: none;
-     }
+    }
 
     .second-screen .container .container-div .advantages {
         margin: 0;
@@ -626,7 +627,7 @@
         width: 340px;
         position: relative;
         background: linear-gradient(rgb(47, 46, 46), rgb(47, 46, 46)), url(../images/bgMaster.png) center / cover no-repeat, url(../images/bg5.png) right top / auto no-repeat;
-
+        box-sizing: border-box;
     }
 
     .seven-ten-screen .container .master .master-first-block {
