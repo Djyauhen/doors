@@ -809,6 +809,10 @@
     .seven-ten-screen .container .footer .footer-item {
         font-size: 9px;
     }
+
+    dialog {
+        width: 340px;
+    }
 }
 
 
