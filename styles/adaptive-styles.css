@@ -186,6 +186,9 @@
         flex-direction: column-reverse;
         z-index: 10;
     }
+    .second-screen .container .container-div .background-image {
+        display: none;
+     }
 
     .second-screen .container .container-div .advantages {
         margin: 0;
