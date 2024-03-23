@@ -955,6 +955,14 @@
     dialog {
         width: 340px;
     }
+
+    dialog .container .title {
+        font-size: 28px;
+    }
+
+    dialog .container .dialog-subtitle {
+        font-size: 9px;
+    }
 }
 
 
