@@ -2332,6 +2332,10 @@ dialog .container .dialog-form .input-item .input {
     background: transparent;
 }
 
+dialog .container .dialog-form .input-item .input:focus-visible {
+    outline: transparent;
+}
+
 dialog .container .dialog-form .input-item .input.error {
     border-color: rgb(255, 0, 0);
 }
