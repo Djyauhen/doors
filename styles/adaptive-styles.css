@@ -723,7 +723,7 @@
 
     .seven-ten-screen .container .master {
         padding: 40px 10px;
-        width: 340px;
+        width: 330px;
         position: relative;
         background: linear-gradient(rgb(47, 46, 46), rgb(47, 46, 46)), url(../images/bgMaster.png) center / cover no-repeat, url(../images/bg5.png) right top / auto no-repeat;
         box-sizing: border-box;
@@ -941,11 +941,15 @@
     }
 
     .seven-ten-screen .container .footer .footer-item.agree {
-        width: 65px;
+        width: 68px;
+    }
+
+    .seven-ten-screen .container .footer .footer-item.personal-data {
+        width: 80px;
     }
 
     .seven-ten-screen .container .footer .footer-item.unp {
-        width: 40px;
+        width: 45px;
     }
 
     dialog {
