@@ -282,11 +282,12 @@
     .second-screen .container .container-div .photos,
     .second-screen .container .container-div .photos .swiper-wrapper .swiper-slide,
     .second-screen .container .container-div .photos .swiper-wrapper .swiper-slide img {
-        width: 320px;
+        width: 300px;
+        height: auto;
     }
 
     .second-screen .container .container-div .photos-pagination {
-        bottom: 0;
+        bottom: -15px;
         left: calc(50% - 25px);
     }
 
@@ -394,8 +395,8 @@
 
     .four-screen .content-box {
         top: 0;
-        max-width: 340px;
-        padding: 45px 10px 75px;
+        max-width: 300px;
+        padding: 45px 0 75px;
         border-radius: 0;
         background: transparent;
         border: 0;
@@ -411,7 +412,7 @@
 
     .four-screen .content-box .title {
         grid-area: title;
-        max-width: 340px;
+        max-width: 300px;
     }
 
     .four-screen .content-box .title,
@@ -422,7 +423,7 @@
     .four-screen .content-box .catalog-image {
         position: relative;
         left: 0;
-        width: 320px;
+        width: 300px;
         height: 80%;
         top: 0;
         grid-area: catalog-image;
@@ -451,7 +452,7 @@
     }
 
     .four-screen .content-box .airplane .airplane-image {
-        width: 320px;
+        width: 300px;
     }
 
     .four-screen .content-box .four-screen-content-image {
@@ -519,7 +520,7 @@
             "photos-factory"
             "video-factory";
         grid-template-rows: 100px 205px 280px 390px 300px;
-        grid-template-columns: 320px;
+        grid-template-columns: 300px;
     }
 
     .five-screen .container .description .director {
@@ -568,7 +569,7 @@
         font-size: 12px;
         font-family: "Montserrat", sans-serif;
         font-style: italic;
-        max-width: 220px;
+        max-width: 200px;
         opacity: 0.7;
     }
 
@@ -580,15 +581,15 @@
         justify-content: space-around;
         flex-direction: row;
         flex-wrap: wrap;
-        max-width: 320px;
+        max-width: 300px;
     }
 
     .five-screen .container .certificates .subtitle {
-        width: 320px;
+        width: 300px;
     }
 
     .five-screen .container .certificates .certificate-item {
-        width: 150px;
+        width: 145px;
     }
 
     .five-screen .container .photos-factory .subtitle,
@@ -629,14 +630,14 @@
     .six-screen .container {
         position: relative;
         top: 0;
-        padding: 0 10px;
+        padding: 0;
         background: none;
         background-blend-mode: normal;
         border-image: none;
         border-width: 0;
         border-radius: 0;
         border-style: none;
-        max-width: 320px;
+        max-width: 300px;
     }
 
     .six-screen .container .six-screen-image {
@@ -644,12 +645,13 @@
     }
 
     .six-screen .container .text-block {
-        max-width: 320px;
+        max-width: 300px;
+        margin: 0 auto;
     }
 
     .six-screen .container .text-block .title {
         max-width: 287px;
-        margin: 0 0 27px;
+        margin: 0 auto 27px;
     }
 
     .six-screen .container .text-block .presents-items {
@@ -702,14 +704,21 @@
     }
 
     .seven-ten-screen .container .feedbacks {
-        max-width: 320px;
+        max-width: 300px;
 
     }
+
 
     .seven-ten-screen .container .feedbacks .feedback-left,
     .seven-ten-screen .container .feedbacks .feedback-right,
     .seven-ten-screen .container .feedbacks .feedback-pagination {
         display: flex;
+    }
+
+    .seven-ten-screen .container .feedbacks .feedback-left,
+    .seven-ten-screen .container .feedbacks .feedback-right {
+        top: 20px;
+        height: 30%;
     }
 
     .seven-ten-screen .container .feedbacks .feedback-pagination {
@@ -727,7 +736,7 @@
         border-width: unset;
         border-color: unset;
         border-style: unset;
-        max-width: 320px;
+        max-width: 300px;
         max-height: unset;
         padding: 10px;
         box-sizing: border-box;
@@ -737,7 +746,7 @@
 
     .seven-ten-screen .container .master {
         padding: 40px 10px;
-        width: 330px;
+        width: 320px;
         position: relative;
         background: linear-gradient(rgb(47, 46, 46), rgb(47, 46, 46)), url(../images/bgMaster.png) center / cover no-repeat, url(../images/bg5.png) right top / auto no-repeat;
         box-sizing: border-box;
@@ -751,6 +760,7 @@
 
     .seven-ten-screen .container .master .master-first-block .title {
         margin-bottom: 490px;
+        font-size: 23px;
     }
 
 
@@ -769,7 +779,7 @@
     .seven-ten-screen .container .master .second-master-block .master-image .master-first-image {
         position: absolute;
         bottom: 0;
-        left: 0;
+        left: -10px;
         z-index: 1;
         width: 320px;
     }
@@ -786,8 +796,8 @@
     }
 
     .seven-ten-screen .container .master .second-master-block .master-description .circle {
-        top: 90px;
-        left: 90px;
+        top: 70px;
+        left: 80px;
     }
 
     .seven-ten-screen .container .master .second-master-block .master-description .master-item .master-name {
@@ -800,7 +810,7 @@
 
     .seven-ten-screen .container .master .master-first-block .works-measuring .works-measuring-item .works-measuring-text {
         font-size: 15px;
-        max-width: 250px;
+        max-width: 240px;
     }
 
     .seven-ten-screen .container .master .master-first-block .works-measuring .works-measuring-item .circle {
