@@ -370,12 +370,12 @@
         display: none;
     }
 
-
     .four-screen {
         height: 100%;
-        background: linear-gradient(rgb(48, 46, 46), rgb(48, 46, 46)) center no-repeat, url("../images/bg5.png") center / cover repeat;
+        background: unset;
         overflow: clip;
         background-blend-mode: color-dodge;
+        top: 0;
     }
 
     .four-screen .content-box {
@@ -488,8 +488,13 @@
 
     .five-screen {
         padding-top: 0;
-        background: linear-gradient(rgb(48, 46, 46), rgb(48, 46, 46)) center no-repeat, url(../images/bg4.png) center 30px / 250% no-repeat, url(../images/bg5.png) center / cover repeat;
         padding-bottom: 60px;
+        background: linear-gradient(rgb(48, 46, 46), rgb(48, 46, 46)) center no-repeat, url(../images/bg5.png) center / cover repeat;
+    }
+
+    .five-screen .container {
+        background: url(../images/bg4.png) center 30px / 250% no-repeat;
+
     }
 
     .five-screen .container .description {
@@ -595,14 +600,16 @@
         border-radius: 50%;
         width: 240px;
         height: 240px;
+        background-image: url(../images/video_small.png);
     }
 
     .six-screen {
         position: relative;
         height: auto;
-        background: linear-gradient(rgb(48, 46, 46), rgb(48, 46, 46)) center no-repeat, url(../images/bg5.png) center / cover repeat;
+        background: unset;
         background-blend-mode: color-dodge;
         padding-bottom: 45px;
+        bottom: -60px;
     }
 
     .six-screen .container {
@@ -693,6 +700,10 @@
 
     .seven-ten-screen .container .feedbacks .feedback-pagination {
         margin-bottom: 67px;
+    }
+
+    .seven-ten-screen .container .feedbacks .feedback-items {
+        margin-bottom: 80px;
     }
 
 
@@ -918,6 +929,7 @@
     .seven-ten-screen .container .footer {
         width: 270px;
         gap: 10px;
+        grid-template: "logo agree personal-data unp";
     }
 
     .seven-ten-screen .container .footer img {
@@ -926,6 +938,14 @@
 
     .seven-ten-screen .container .footer .footer-item {
         font-size: 9px;
+    }
+
+    .seven-ten-screen .container .footer .footer-item.agree {
+        width: 65px;
+    }
+
+    .seven-ten-screen .container .footer .footer-item.unp {
+        width: 40px;
     }
 
     dialog {

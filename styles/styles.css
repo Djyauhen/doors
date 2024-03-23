@@ -982,6 +982,7 @@
     position: relative;
     overflow-x: clip;
     height: 0;
+    top: -560px;
 }
 
 .four-screen .content-box {
@@ -1419,6 +1420,7 @@
 .six-screen {
     position: relative;
     height: 0;
+    bottom: -480px;
 }
 
 .six-screen .container {
@@ -2208,14 +2210,16 @@
 
 .seven-ten-screen .container .footer {
     max-width: 980px;
-    display: flex;
+    display: grid;
+    grid-template: "logo unp agree personal-data";
     align-items: center;
     gap: 54px;
     padding-bottom: 17px;
 }
 
-.seven-ten-screen .container .logo {
+.seven-ten-screen .container .footer .logo {
     margin: 0;
+    grid-area: logo;
 }
 
 .seven-ten-screen .container .footer .footer-item {
@@ -2228,6 +2232,20 @@
 .seven-ten-screen .container .footer .footer-item.links:hover {
     cursor: pointer;
 }
+
+.seven-ten-screen .container .footer .footer-item.unp {
+    grid-area: unp;
+}
+
+.seven-ten-screen .container .footer .footer-item.agree {
+    grid-area: agree;
+}
+
+.seven-ten-screen .container .footer .footer-item.personal-data {
+    grid-area: personal-data;
+}
+
+
 
 @keyframes flareAnimation {
     0% {
@@ -2550,6 +2568,13 @@ dialog::backdrop {
     background-color: rgba(30, 30, 30, 0.7);
     animation: fade-in 0.3s;
     animation-fill-mode: forwards;
+}
+
+
+#bizon-main-image-wrapper img,
+#bizon-main-image-wrapper video {
+    border-radius: 5px;
+    max-width: 60%;
 }
 
 @keyframes fade-in {
