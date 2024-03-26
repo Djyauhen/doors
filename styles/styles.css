@@ -3,6 +3,13 @@
     margin: 0 auto;
 }
 
+html, body {
+    text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+}
+
 @font-face {
     font-family: "Futura_Book-Normal";
     src: url("../fonts/Futura_book.ttf");
