@@ -2213,7 +2213,7 @@
     display: grid;
     grid-template: "logo unp agree personal-data";
     align-items: center;
-    gap: 54px;
+    justify-content: space-between;
     padding-bottom: 17px;
 }
 

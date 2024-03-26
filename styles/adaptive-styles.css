@@ -1,4 +1,5 @@
 @media screen and (max-width: 1169px) {
+
     .container {
         max-width: 320px;
         padding-right: 10px;
@@ -7,17 +8,17 @@
     }
 
     .title {
-        font-size: 26px;
+        font-size: 24px;
         text-align: center;
     }
 
     .title-second, .subtitle {
-        font-size: 26px;
+        font-size: 24px;
         text-align: center;
     }
 
     h1 {
-        font-size: 23px;
+        font-size: 21px;
         text-align: center;
     }
 
