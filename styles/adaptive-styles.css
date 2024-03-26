@@ -22,7 +22,8 @@
     }
 
     .button {
-        font-size: 13px;
+        font-size: 17px;
+        width: 100%;
     }
 
     .first-screen .header {
