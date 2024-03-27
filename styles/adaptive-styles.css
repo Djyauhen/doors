@@ -957,7 +957,7 @@
     }
 
     .seven-ten-screen .container .footer {
-        gap: 10px;
+        gap: 5px;
         max-width: 270px;
         grid-template: "logo agree personal-data unp";
     }
@@ -975,6 +975,11 @@
     .seven-ten-screen .container .footer .footer-item.unp {
         width: max-content;
         max-width: 75px;
+    }
+
+
+    .seven-ten-screen .container .footer .footer-item.agree.links {
+        width: 60px;
     }
 
     dialog {
