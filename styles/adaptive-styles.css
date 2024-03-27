@@ -830,7 +830,7 @@
     }
 
     .seven-ten-screen .container .questions {
-        width: 270px;
+        width: 280px;
         margin-bottom: 35px;
     }
 
@@ -845,13 +845,13 @@
         "manager-item phone-numbers"
         "manager-item social-nets";
         gap: 17px;
-        max-width: 270px;
+        max-width: 280px;
     }
 
     .seven-ten-screen .container .questions .contacts-info .time-to-work {
         font-size: 11px;
         text-align: center;
-        max-width: 270px;
+        max-width: 280px;
     }
 
     .seven-ten-screen .container .questions .contacts-info .contact-form {
@@ -862,7 +862,7 @@
 
     .seven-ten-screen .container .questions .contacts-info .contact-form .inputs .input-item .contact-input,
     .seven-ten-screen .container .questions .contacts-info .contact-form .button {
-        width: 270px;
+        width: 280px;
         height: 47px;
     }
 
@@ -918,7 +918,7 @@
     }
 
     .seven-ten-screen .container .map {
-        width: 270px;
+        width: 280px;
         flex-direction: column;
         margin-bottom: 30px;
     }
@@ -950,7 +950,7 @@
 
     .seven-ten-screen .container .map .map-container {
         border-radius: 10px;
-        width: 270px;
+        width: 280px;
         height: 166px;
         overflow: hidden;
         margin: 0;
