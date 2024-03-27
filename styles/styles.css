@@ -943,11 +943,12 @@ html, body {
     align-items: center;
     justify-content: center;
     border-radius: 7px;
-    width: 250px;
+    width: 173px;
     height: 43px;
     font-family: "Futura PT", sans-serif;
     color: rgb(255, 255, 255);
     font-size: 17px;
+
 }
 
 .third-screen .doors .container .arrow-prev,

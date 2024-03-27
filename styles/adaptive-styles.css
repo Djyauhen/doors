@@ -382,6 +382,10 @@
         display: none;
     }
 
+    .third-screen .doors .container .doors-container .doors-items .door-item .door-actions .button {
+        width: 250px;
+    }
+
     .third-screen .doors .container .arrow-prev,
     .third-screen .doors .container .arrow-next {
         display: none;
