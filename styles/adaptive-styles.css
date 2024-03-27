@@ -953,7 +953,7 @@
     }
 
     .seven-ten-screen .container .footer {
-        justify-content: space-between;
+        gap: 10px;
         max-width: 270px;
         grid-template: "logo agree personal-data unp";
     }
@@ -963,19 +963,14 @@
     }
 
     .seven-ten-screen .container .footer .footer-item {
-        font-size: 9px;
+        font-size: 8px;
     }
 
-    .seven-ten-screen .container .footer .footer-item.agree {
-        width: 68px;
-    }
-
-    .seven-ten-screen .container .footer .footer-item.personal-data {
-        width: 80px;
-    }
-
+    .seven-ten-screen .container .footer .footer-item.agree.links,
+    .seven-ten-screen .container .footer .footer-item.personal-data.links,
     .seven-ten-screen .container .footer .footer-item.unp {
-        width: 45px;
+        width: max-content;
+        max-width: 75px;
     }
 
     dialog {
