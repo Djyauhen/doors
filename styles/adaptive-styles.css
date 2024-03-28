@@ -981,23 +981,23 @@
     }
 
     .seven-ten-screen .container .footer .footer-item {
-        font-size: 8px;
+        font-size: 9px;
     }
 
 
     .seven-ten-screen .container .footer .footer-item.personal-data.links {
-        max-width: 120px;
+        max-width: 85px;
         width: 100%;
     }
 
 
     .seven-ten-screen .container .footer .footer-item.agree.links {
-        max-width: 60px;
+        max-width: 70px;
         width: 100%;
     }
 
     .seven-ten-screen .container .footer .footer-item.unp {
-        max-width: 56px;
+        max-width: 50px;
         width: 100%;
     }
 
