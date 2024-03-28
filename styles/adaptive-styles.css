@@ -516,6 +516,7 @@
 
     .four-screen .content-box .personal-data label {
         font-size: 10px;
+        max-width: 230px;
     }
 
     .five-screen {
@@ -987,7 +988,7 @@
     .seven-ten-screen .container .footer .footer-item.personal-data.links,
     .seven-ten-screen .container .footer .footer-item.unp {
         width: max-content;
-        max-width: 75px;
+        max-width: 80px;
     }
 
 
