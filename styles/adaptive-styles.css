@@ -1005,6 +1005,10 @@
         width: 320px;
     }
 
+    dialog#dialog-check {
+        box-sizing: border-box;
+    }
+
     dialog .container .title {
         font-size: 28px;
     }
