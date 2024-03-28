@@ -981,12 +981,12 @@
     }
 
     .seven-ten-screen .container .footer .footer-item {
-        font-size: 7px;
+        font-size: 8px;
     }
 
 
     .seven-ten-screen .container .footer .footer-item.personal-data.links {
-        max-width: 120px;
+        max-width: 125px;
         width: 100%;
     }
 
