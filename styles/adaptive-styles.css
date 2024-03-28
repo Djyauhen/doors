@@ -44,7 +44,7 @@
         grid-template:
                 "address"
                 "hours";
-        gap: 5px;
+        gap: 0;
     }
 
 
@@ -132,11 +132,22 @@
     .first-screen .main-screen .container .main-screen-description .main-screen-door-image-mobile {
         display: flex;
         grid-area: door;
+        width: 100%;
+        height: 90%;
+        margin-bottom: 0;
+    }
+
+    .first-screen .main-screen .container .main-screen-description .main-screen-door-image-mobile img{
+        width: 85%;
+        position: relative;
+        bottom: -10%;
+        z-index: 1;
     }
 
     .first-screen .main-screen .container .main-screen-description .main-screen-advantages {
         max-width: 300px;
         grid-area: advantage;
+        z-index: 2;
     }
 
 
@@ -830,7 +841,7 @@
     }
 
     .seven-ten-screen .container .questions {
-        width: 280px;
+        width: 300px;
         margin-bottom: 35px;
     }
 
@@ -845,13 +856,13 @@
         "manager-item phone-numbers"
         "manager-item social-nets";
         gap: 17px;
-        max-width: 280px;
+        max-width: 300px;
     }
 
     .seven-ten-screen .container .questions .contacts-info .time-to-work {
         font-size: 11px;
         text-align: center;
-        max-width: 280px;
+        max-width: 300px;
     }
 
     .seven-ten-screen .container .questions .contacts-info .contact-form {
@@ -862,7 +873,7 @@
 
     .seven-ten-screen .container .questions .contacts-info .contact-form .inputs .input-item .contact-input,
     .seven-ten-screen .container .questions .contacts-info .contact-form .button {
-        width: 280px;
+        width: 300px;
         height: 47px;
     }
 
@@ -918,7 +929,7 @@
     }
 
     .seven-ten-screen .container .map {
-        width: 280px;
+        width: 300px;
         flex-direction: column;
         margin-bottom: 30px;
     }
@@ -929,14 +940,16 @@
     }
 
     .seven-ten-screen .container .map .address-gallery .first-image {
-        width: 185px;
-        height: 105px;
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
     }
 
     .seven-ten-screen .container .map .address-gallery .second-image,
     .seven-ten-screen .container .map .address-gallery .third-image {
-        width: 75px;
         height: 50px;
+        width: 95px;
+        border-radius: 10px;
     }
 
     .seven-ten-screen .container .map .address-gallery .address-title {
@@ -950,7 +963,7 @@
 
     .seven-ten-screen .container .map .map-container {
         border-radius: 10px;
-        width: 280px;
+        width: 300px;
         height: 166px;
         overflow: hidden;
         margin: 0;
@@ -958,7 +971,7 @@
 
     .seven-ten-screen .container .footer {
         gap: unset;
-        max-width: 280px;
+        max-width: 300px;
         grid-template: "logo agree personal-data unp";
     }
 
