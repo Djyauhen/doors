@@ -984,22 +984,21 @@
         font-size: 8px;
     }
 
-    .seven-ten-screen .container .footer .footer-item.agree.links,
-    .seven-ten-screen .container .footer .footer-item.personal-data.links,
-    .seven-ten-screen .container .footer .footer-item.unp {
-        width: max-content;
-        max-width: 80px;
-    }
-
 
     .seven-ten-screen .container .footer .footer-item.personal-data.links {
-        max-width: 100px;
+        max-width: 120px;
         width: 100%;
     }
 
 
     .seven-ten-screen .container .footer .footer-item.agree.links {
-        width: 60px;
+        max-width: 60px;
+        width: 100%;
+    }
+
+    .seven-ten-screen .container .footer .footer-item.unp {
+        max-width: 56px;
+        width: 100%;
     }
 
     dialog {
