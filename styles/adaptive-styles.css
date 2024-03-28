@@ -992,6 +992,12 @@
     }
 
 
+    .seven-ten-screen .container .footer .footer-item.personal-data.links {
+        max-width: 100px;
+        width: 100%;
+    }
+
+
     .seven-ten-screen .container .footer .footer-item.agree.links {
         width: 60px;
     }
