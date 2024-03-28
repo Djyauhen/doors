@@ -1010,7 +1010,11 @@
     }
 
     dialog .container .dialog-subtitle {
-        font-size: 9px;
+        font-size: 11px;
+    }
+
+    dialog .container .dialog-form .input-item .input {
+        font-size: 14px;
     }
 }
 
